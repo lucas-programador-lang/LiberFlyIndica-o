@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problemas Resolvidos | Indicação LiberFly</title>
 
-<title>Problemas Resolvidos</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -16,18 +15,37 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
+background:#020617;
 color:white;
 overflow-x:hidden;
 }
 
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* barra prova social */
+
+.proof{
+background:#16a34a;
+text-align:center;
+padding:12px;
+font-weight:600;
+font-size:14px;
+}
+
+/* header */
+
 header{
 text-align:center;
-padding:70px 20px;
+padding:80px 20px;
 animation:fadeDown 1s ease;
 }
 
@@ -37,7 +55,7 @@ margin-bottom:15px;
 }
 
 h1{
-font-size:38px;
+font-size:42px;
 }
 
 .subtitle{
@@ -45,19 +63,21 @@ color:#94a3b8;
 margin-top:10px;
 }
 
+/* container */
+
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 padding:20px;
 }
 
 .card{
 background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:16px;
 padding:35px;
-border-radius:15px;
 margin-top:30px;
-border:1px solid rgba(255,255,255,0.08);
-animation:fadeUp 1.2s ease;
+animation:fadeUp 1s ease;
 }
 
 .card h2{
@@ -69,23 +89,26 @@ color:#cbd5f5;
 line-height:1.7;
 }
 
+/* botão principal */
+
 .button{
 display:inline-block;
 margin-top:25px;
-padding:16px 40px;
+padding:16px 42px;
 background:#22c55e;
+border-radius:12px;
 color:white;
 font-size:18px;
 text-decoration:none;
-border-radius:12px;
-transition:0.3s;
+font-weight:600;
 animation:pulse 2s infinite;
 }
 
 .button:hover{
 background:#16a34a;
-transform:scale(1.05);
 }
+
+/* grid benefícios */
 
 .features{
 display:grid;
@@ -95,85 +118,101 @@ margin-top:30px;
 }
 
 .feature{
+text-align:center;
 background:rgba(255,255,255,0.05);
 padding:25px;
-border-radius:15px;
-border:1px solid rgba(255,255,255,0.08);
-text-align:center;
-animation:fadeUp 1.5s ease;
+border-radius:12px;
 }
 
 .feature i{
-font-size:28px;
-margin-bottom:10px;
+font-size:30px;
 color:#22c55e;
+margin-bottom:10px;
 }
 
-.social{
-margin-top:40px;
+/* contador */
+
+.counter{
 text-align:center;
+margin-top:20px;
+}
+
+.counter-number{
+font-size:48px;
+color:#22c55e;
+font-weight:700;
+}
+
+/* redes */
+
+.social{
+text-align:center;
+margin-top:40px;
 }
 
 .social a{
 font-size:30px;
-margin:0 12px;
+margin:0 10px;
 color:white;
-transition:0.3s;
 }
 
 .social a:hover{
 color:#22c55e;
-transform:scale(1.2);
 }
 
+/* botão flutuante */
+
+.floating{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#22c55e;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* footer */
+
 .footer{
-margin-top:50px;
-padding:20px;
 text-align:center;
+margin-top:60px;
+padding:20px;
 color:#64748b;
+font-size:14px;
 }
 
 /* animações */
 
 @keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+from{opacity:0; transform:translateY(40px)}
+to{opacity:1; transform:translateY(0)}
 }
 
 @keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+from{opacity:0; transform:translateY(-40px)}
+to{opacity:1; transform:translateY(0)}
 }
 
 @keyframes pulse{
-0%{
-transform:scale(1);
-}
-50%{
-transform:scale(1.06);
-}
-100%{
-transform:scale(1);
-}
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
 }
 
 </style>
-
 </head>
 
 <body>
+
+<div id="particles-js"></div>
+
+<div class="proof">
+✈️ Mais de 100.000 passageiros já resolveram problemas de voo com a LiberFly
+</div>
 
 <header>
 
@@ -182,75 +221,7 @@ transform:scale(1);
 <h1>Problemas Resolvidos</h1>
 
 <p class="subtitle">
-Indicação de solução para problemas com companhias aéreas
-</p>
-
-<a class="button"
-href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
-
-Resolva Seu Problema Aqui
-
-</a>
-
-</header>
-
-
-<div class="container">
-
-<div class="card">
-
-<h2>✈️ Como funciona?</h2>
-
-<p>
-Se você teve problemas com companhias aéreas como atraso de voo,
-cancelamento, bagagem extraviada, overbooking ou outros transtornos,
-existe a possibilidade de receber uma compensação.
-</p>
-
-<p>
-A LiberFly atua como mediadora entre o passageiro e a companhia aérea
-para resolver essas situações com rapidez e transparência.
-</p>
-
-<p>
-Essa página é apenas uma <b>indicação</b> para ajudar quem passou por
-esse tipo de problema.
-</p>
-
-</div>
-
-
-<div class="features">
-
-<div class="feature">
-<i class="fa-solid fa-plane"></i>
-<h3>Atraso ou Cancelamento</h3>
-<p>Voos atrasados ou cancelados podem gerar compensação.</p>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-suitcase"></i>
-<h3>Bagagem Extraviada</h3>
-<p>Extravio ou dano de bagagem também pode gerar indenização.</p>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-money-bill"></i>
-<h3>Pagamento Rápido</h3>
-<p>Possibilidade de receber até R$1000 em até 48h.</p>
-</div>
-
-</div>
-
-
-<div class="card">
-
-<h2>💡 Resolver Agora</h2>
-
-<p>
-Clique no botão abaixo para acessar a plataforma
-e verificar se você tem direito a compensação.
+Indicação para resolver problemas com companhias aéreas
 </p>
 
 <a class="button"
@@ -261,8 +232,53 @@ Resolver Meu Problema
 
 </a>
 
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>✈️ Teve problema com voo nos últimos 5 anos?</h2>
+
+<p>
+Se você sofreu atraso, cancelamento de voo, bagagem extraviada ou overbooking,
+existe a possibilidade de receber compensação.
+</p>
+
+<p>
+Esta página é apenas uma indicação para acessar a plataforma da LiberFly
+e verificar se você tem direito.
+</p>
+
 </div>
 
+<div class="features">
+
+<div class="feature">
+<i class="fa-solid fa-plane"></i>
+<h3>Atraso ou Cancelamento</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-suitcase"></i>
+<h3>Bagagem Extraviada</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-money-bill"></i>
+<h3>Possível Compensação</h3>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="counter">
+<h2>Pessoas que já resolveram casos</h2>
+<div class="counter-number" id="counter">0</div>
+</div>
+
+</div>
 
 <div class="social">
 
@@ -282,12 +298,50 @@ Resolver Meu Problema
 
 </div>
 
+<a class="floating"
+href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
+target="_blank">
+
+Resolver Agora
+
+</a>
 
 <div class="footer">
-
 Página de indicação • Parceiro LiberFly
-
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+particles:{
+number:{value:60},
+size:{value:3},
+color:{value:"#22c55e"},
+line_linked:{enable:true,color:"#22c55e"},
+move:{speed:1}
+}
+})
+
+let counter = document.getElementById("counter")
+let value = 0
+let target = 100000
+
+let interval = setInterval(()=>{
+
+value += 500
+
+counter.innerText = value.toLocaleString()
+
+if(value >= target){
+counter.innerText = target.toLocaleString()
+clearInterval(interval)
+}
+
+},20)
+
+</script>
 
 </body>
 </html>
