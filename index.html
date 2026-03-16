@@ -51,7 +51,7 @@ height:100%;
 z-index:-1;
 }
 
-/* TOPBAR */
+/* BARRA SUPERIOR */
 
 .topbar{
 background:#16a34a;
@@ -82,7 +82,7 @@ margin:auto;
 }
 
 .logo{
-width:90px;
+width:95px;
 }
 
 .menu{
@@ -95,17 +95,18 @@ flex-wrap:wrap;
 color:white;
 text-decoration:none;
 font-size:14px;
-opacity:0.8;
+opacity:0.85;
 transition:0.2s;
 }
 
 .menu a:hover{
 opacity:1;
+color:#22c55e;
 }
 
 .cta-nav{
 background:#22c55e;
-padding:10px 18px;
+padding:10px 20px;
 border-radius:10px;
 text-decoration:none;
 color:white;
@@ -121,43 +122,44 @@ background:#16a34a;
 
 .hero{
 text-align:center;
-padding:90px 20px;
+padding:100px 20px 70px;
 max-width:900px;
 margin:auto;
 }
 
 .hero h1{
-font-size:46px;
-margin-bottom:10px;
+font-size:48px;
+margin-bottom:12px;
 }
 
 .hero p{
 color:#94a3b8;
-font-size:18px;
+font-size:19px;
 }
 
 .live-proof{
-margin-top:15px;
+margin-top:16px;
 color:#22c55e;
 font-weight:600;
 }
 
 .button-main{
 display:inline-block;
-margin-top:30px;
-padding:18px 50px;
+margin-top:35px;
+padding:18px 55px;
 background:linear-gradient(135deg,#22c55e,#16a34a);
 border-radius:14px;
 color:white;
 font-size:20px;
 font-weight:700;
 text-decoration:none;
-box-shadow:0 10px 25px rgba(34,197,94,0.4);
+box-shadow:0 10px 30px rgba(34,197,94,0.35);
 transition:0.25s;
 }
 
 .button-main:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
+box-shadow:0 15px 40px rgba(34,197,94,0.45);
 }
 
 /* CONTAINER */
@@ -168,11 +170,39 @@ margin:auto;
 padding:20px;
 }
 
+/* GRID FEATURES */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.feature{
+text-align:center;
+background:rgba(255,255,255,0.05);
+padding:35px;
+border-radius:14px;
+transition:0.25s;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.feature:hover{
+transform:translateY(-4px);
+}
+
+.feature i{
+font-size:36px;
+color:#22c55e;
+margin-bottom:12px;
+}
+
 /* CARDS */
 
 .card{
 background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.08);
 border-radius:16px;
 padding:35px;
 margin-top:30px;
@@ -186,42 +216,30 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* GRID */
+/* HOW WORKS */
 
-.grid{
+.steps{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-margin-top:30px;
+margin-top:20px;
 }
 
-.feature{
-text-align:center;
-background:rgba(255,255,255,0.05);
-padding:30px;
+.step{
+background:rgba(255,255,255,0.04);
+padding:20px;
 border-radius:12px;
-transition:0.2s;
-}
-
-.feature:hover{
-transform:translateY(-3px);
-}
-
-.feature i{
-font-size:34px;
-color:#22c55e;
-margin-bottom:10px;
 }
 
 /* COUNTER */
 
 .counter{
 text-align:center;
-margin-top:20px;
+margin-top:15px;
 }
 
 .counter-number{
-font-size:50px;
+font-size:52px;
 color:#22c55e;
 font-weight:700;
 }
@@ -230,7 +248,7 @@ font-weight:700;
 
 .social{
 text-align:center;
-margin-top:40px;
+margin-top:45px;
 }
 
 .social a{
@@ -256,7 +274,7 @@ font-weight:600;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-/* FIXED BAR */
+/* BOTTOM BAR */
 
 .bottom-bar{
 position:fixed;
@@ -296,8 +314,9 @@ z-index:999;
 .footer{
 text-align:center;
 margin-top:60px;
-padding:20px;
+padding:25px;
 color:#64748b;
+font-size:14px;
 }
 
 /* MOBILE */
@@ -311,10 +330,6 @@ font-size:32px;
 .button-main{
 font-size:18px;
 padding:16px 35px;
-}
-
-.menu{
-gap:14px;
 }
 
 }
@@ -335,7 +350,7 @@ gap:14px;
 ⚠️ Verificação gratuita disponível hoje • leva menos de 2 minutos
 </div>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 
 <div class="nav">
 
@@ -348,14 +363,12 @@ gap:14px;
 <a href="bagagem-extraviada.html">Bagagem</a>
 <a href="overbooking.html">Overbooking</a>
 <a href="direitos-do-passageiro.html">Direitos</a>
-<a href="indenizacao-atraso-voo.html">Indenização</a>
 
 </div>
 
 <a class="cta-nav"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 Verificar Caso
 </a>
 
@@ -375,8 +388,7 @@ Verificar Caso
 
 <a class="button-main"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 
 ✈️ Verificar Meu Caso
 
@@ -386,7 +398,7 @@ rel="noopener noreferrer">
 
 <div class="container">
 
-<!-- GRID -->
+<!-- FEATURES -->
 
 <div class="grid">
 
@@ -418,21 +430,21 @@ rel="noopener noreferrer">
 
 <h2>Como funciona</h2>
 
-<p>1️⃣ Clique em verificar caso</p>
-<p>2️⃣ Informe os dados do voo</p>
-<p>3️⃣ Veja se tem direito à compensação</p>
+<div class="steps">
 
+<div class="step">
+1️⃣ Clique em verificar caso
 </div>
 
-<!-- GUIAS -->
+<div class="step">
+2️⃣ Informe os dados do voo
+</div>
 
-<div class="card">
+<div class="step">
+3️⃣ Veja se tem direito à compensação
+</div>
 
-<h2>Guias úteis para passageiros</h2>
-
-<p><a href="atraso-de-voo.html">Indenização por atraso de voo</a></p>
-<p><a href="bagagem-extraviada.html">Bagagem extraviada: o que fazer</a></p>
-<p><a href="direitos-do-passageiro.html">Direitos do passageiro</a></p>
+</div>
 
 </div>
 
@@ -440,59 +452,11 @@ rel="noopener noreferrer">
 
 <div class="card">
 
+<h2 style="text-align:center;">Pessoas que já resolveram casos</h2>
+
 <div class="counter">
-
-<h2>Pessoas que já resolveram casos</h2>
-
 <div class="counter-number" id="counter">0</div>
-
 </div>
-
-</div>
-
-<!-- FAQ -->
-
-<div class="card">
-
-<h2>Perguntas frequentes</h2>
-
-<p><strong>Quanto custa verificar o caso?</strong><br>
-A verificação normalmente é gratuita.</p>
-
-<p><strong>Quanto tempo leva?</strong><br>
-A análise inicial leva poucos minutos.</p>
-
-<p><strong>Preciso entrar com processo?</strong><br>
-A plataforma analisa o caso e informa as opções disponíveis.</p>
-
-</div>
-
-<!-- TRANSPARÊNCIA -->
-
-<div class="card">
-
-<h2>Transparência</h2>
-
-<p>
-Esta página é apenas uma indicação para a plataforma LiberFly.
-Não somos responsáveis pelo processo de indenização.
-</p>
-
-</div>
-
-<!-- SOCIAL -->
-
-<div class="social">
-
-<h2>Instagram</h2>
-
-<a href="https://www.instagram.com/voosolutions/" target="_blank">
-<i class="fab fa-instagram"></i> VooSolutions
-</a>
-
-<a href="https://www.instagram.com/liberflybr" target="_blank">
-<i class="fab fa-instagram"></i> LiberFly
-</a>
 
 </div>
 
@@ -507,7 +471,7 @@ Resolver Agora
 </a>
 
 <div class="footer">
-Página de indicação • Parceiro LiberFly
+© 2026 • Página de indicação • Parceiro LiberFly
 </div>
 
 <div class="bottom-bar">
