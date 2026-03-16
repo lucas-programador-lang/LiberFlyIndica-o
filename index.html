@@ -51,7 +51,7 @@ height:100%;
 z-index:-1;
 }
 
-/* BARRA SUPERIOR */
+/* BARRAS SUPERIORES */
 
 .topbar{
 background:#16a34a;
@@ -70,7 +70,7 @@ font-weight:600;
 font-size:14px;
 }
 
-/* NAVBAR */
+/* NAV */
 
 .nav{
 display:flex;
@@ -96,11 +96,9 @@ color:white;
 text-decoration:none;
 font-size:14px;
 opacity:0.85;
-transition:0.2s;
 }
 
 .menu a:hover{
-opacity:1;
 color:#22c55e;
 }
 
@@ -111,11 +109,6 @@ border-radius:10px;
 text-decoration:none;
 color:white;
 font-weight:600;
-transition:0.2s;
-}
-
-.cta-nav:hover{
-background:#16a34a;
 }
 
 /* HERO */
@@ -154,12 +147,6 @@ font-size:20px;
 font-weight:700;
 text-decoration:none;
 box-shadow:0 10px 30px rgba(34,197,94,0.35);
-transition:0.25s;
-}
-
-.button-main:hover{
-transform:translateY(-3px);
-box-shadow:0 15px 40px rgba(34,197,94,0.45);
 }
 
 /* CONTAINER */
@@ -170,7 +157,7 @@ margin:auto;
 padding:20px;
 }
 
-/* GRID FEATURES */
+/* GRID */
 
 .grid{
 display:grid;
@@ -184,12 +171,7 @@ text-align:center;
 background:rgba(255,255,255,0.05);
 padding:35px;
 border-radius:14px;
-transition:0.25s;
 border:1px solid rgba(255,255,255,0.06);
-}
-
-.feature:hover{
-transform:translateY(-4px);
 }
 
 .feature i{
@@ -206,17 +188,9 @@ border:1px solid rgba(255,255,255,0.08);
 border-radius:16px;
 padding:35px;
 margin-top:30px;
-opacity:0;
-transform:translateY(40px);
-transition:0.4s;
 }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* HOW WORKS */
+/* STEPS */
 
 .steps{
 display:grid;
@@ -231,11 +205,11 @@ padding:20px;
 border-radius:12px;
 }
 
-/* COUNTER */
+/* CONTADORES */
 
 .counter{
 text-align:center;
-margin-top:15px;
+margin-top:20px;
 }
 
 .counter-number{
@@ -244,11 +218,18 @@ color:#22c55e;
 font-weight:700;
 }
 
+.money-number{
+font-size:40px;
+color:#22c55e;
+font-weight:700;
+margin-top:10px;
+}
+
 /* SOCIAL */
 
 .social{
 text-align:center;
-margin-top:45px;
+margin-top:40px;
 }
 
 .social a{
@@ -259,7 +240,7 @@ font-size:20px;
 text-decoration:none;
 }
 
-/* FLOATING BUTTON */
+/* FLOATING */
 
 .floating{
 position:fixed;
@@ -271,7 +252,6 @@ padding:16px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
 /* BOTTOM BAR */
@@ -294,7 +274,7 @@ font-size:18px;
 text-decoration:none;
 }
 
-/* NOTIFICATION */
+/* NOTIFY */
 
 .notify{
 position:fixed;
@@ -309,29 +289,50 @@ font-size:14px;
 z-index:999;
 }
 
-/* FOOTER */
+/* POPUP */
+
+.popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.popup{
+background:#020617;
+border:1px solid rgba(255,255,255,0.1);
+padding:40px;
+border-radius:16px;
+text-align:center;
+max-width:420px;
+}
+
+.popup h2{
+margin-bottom:10px;
+}
+
+.popup button{
+margin-top:20px;
+padding:14px 25px;
+background:#22c55e;
+border:none;
+border-radius:10px;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
 
 .footer{
 text-align:center;
 margin-top:60px;
 padding:25px;
 color:#64748b;
-font-size:14px;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-.hero h1{
-font-size:32px;
-}
-
-.button-main{
-font-size:18px;
-padding:16px 35px;
-}
-
 }
 
 </style>
@@ -398,8 +399,6 @@ target="_blank">
 
 <div class="container">
 
-<!-- FEATURES -->
-
 <div class="grid">
 
 <div class="feature">
@@ -424,31 +423,17 @@ target="_blank">
 
 </div>
 
-<!-- COMO FUNCIONA -->
-
 <div class="card">
 
 <h2>Como funciona</h2>
 
 <div class="steps">
-
-<div class="step">
-1️⃣ Clique em verificar caso
-</div>
-
-<div class="step">
-2️⃣ Informe os dados do voo
-</div>
-
-<div class="step">
-3️⃣ Veja se tem direito à compensação
+<div class="step">1️⃣ Clique em verificar caso</div>
+<div class="step">2️⃣ Informe os dados do voo</div>
+<div class="step">3️⃣ Veja se tem direito à compensação</div>
 </div>
 
 </div>
-
-</div>
-
-<!-- CONTADOR -->
 
 <div class="card">
 
@@ -456,6 +441,16 @@ target="_blank">
 
 <div class="counter">
 <div class="counter-number" id="counter">0</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align:center;">Dinheiro já recuperado</h2>
+
+<div class="counter">
+<div class="money-number" id="money">R$ 0</div>
 </div>
 
 </div>
@@ -480,6 +475,28 @@ Resolver Agora
 </a>
 </div>
 
+<!-- POPUP -->
+
+<div class="popup-overlay" id="popup">
+<div class="popup">
+
+<h2>Antes de sair</h2>
+
+<p>Você pode ter direito a indenização por atraso ou cancelamento de voo.</p>
+
+<a class="button-main"
+href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
+target="_blank">
+Verificar meu caso
+</a>
+
+<br><br>
+
+<button onclick="fecharPopup()">Continuar navegando</button>
+
+</div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
@@ -494,6 +511,8 @@ move:{speed:1}
 }
 })
 
+/* contador pessoas */
+
 let counter=document.getElementById("counter")
 let value=0
 let target=100000
@@ -507,23 +526,30 @@ if(value<target)requestAnimationFrame(anim)
 
 anim()
 
+/* contador dinheiro */
+
+let money=0
+let moneyTarget=8500000
+let moneyBox=document.getElementById("money")
+
+function animMoney(){
+money+=Math.floor(Math.random()*15000)
+if(money>=moneyTarget)money=moneyTarget
+moneyBox.innerText="R$ "+money.toLocaleString()
+if(money<moneyTarget)requestAnimationFrame(animMoney)
+}
+
+animMoney()
+
+/* prova social */
+
 setInterval(()=>{
 let n=Math.floor(Math.random()*20)+20
 document.querySelector(".live-proof").innerText=
 "🔥 "+n+" pessoas verificaram possível indenização hoje"
 },5000)
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show")
-}
-})
-})
-
-document.querySelectorAll(".card").forEach(el=>{
-observer.observe(el)
-})
+/* notificações */
 
 const nomes=["João","Maria","Carlos","Ana","Pedro","Lucas"]
 const cidades=["São Paulo","Rio de Janeiro","Curitiba","Salvador"]
@@ -545,6 +571,21 @@ setTimeout(()=>{box.style.display="none"},5000)
 }
 
 setInterval(mostrarNotificacao,15000)
+
+/* popup saída */
+
+let popupShown=false
+
+document.addEventListener("mouseout",function(e){
+if(!popupShown && e.clientY<10){
+document.getElementById("popup").style.display="flex"
+popupShown=true
+}
+})
+
+function fecharPopup(){
+document.getElementById("popup").style.display="none"
+}
 
 </script>
 
