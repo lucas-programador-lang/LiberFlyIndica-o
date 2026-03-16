@@ -138,6 +138,10 @@ margin:auto;
 .hero h1{
 font-size:48px;
 margin-bottom:12px;
+font-weight:700;
+background:linear-gradient(90deg,#22c55e,#4ade80);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
@@ -162,6 +166,11 @@ font-size:20px;
 font-weight:700;
 text-decoration:none;
 box-shadow:0 10px 30px rgba(34,197,94,0.35);
+transition:0.3s;
+}
+
+.button-main:hover{
+transform:scale(1.05);
 }
 
 /* CONTAINER */
@@ -187,6 +196,11 @@ background:rgba(255,255,255,0.05);
 padding:35px;
 border-radius:14px;
 border:1px solid rgba(255,255,255,0.06);
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-6px);
 }
 
 .feature i{
@@ -220,27 +234,7 @@ padding:20px;
 border-radius:12px;
 }
 
-/* CONTADORES */
-
-.counter{
-text-align:center;
-margin-top:20px;
-}
-
-.counter-number{
-font-size:52px;
-color:#22c55e;
-font-weight:700;
-}
-
-.money-number{
-font-size:40px;
-color:#22c55e;
-font-weight:700;
-margin-top:10px;
-}
-
-/* DEPOIMENTOS */
+/* TESTIMONIALS */
 
 .testimonials{
 margin-top:40px;
@@ -299,55 +293,7 @@ font-size:18px;
 text-decoration:none;
 }
 
-/* NOTIFY */
-
-.notify{
-position:fixed;
-left:20px;
-bottom:120px;
-background:#111827;
-padding:14px 18px;
-border-radius:12px;
-display:none;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-font-size:14px;
-z-index:999;
-}
-
-/* POPUP */
-
-.popup-overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:2000;
-}
-
-.popup{
-background:#020617;
-border:1px solid rgba(255,255,255,0.1);
-padding:40px;
-border-radius:16px;
-text-align:center;
-max-width:420px;
-}
-
-.popup button{
-margin-top:20px;
-padding:14px 25px;
-background:#22c55e;
-border:none;
-border-radius:10px;
-color:white;
-font-weight:600;
-cursor:pointer;
-}
+/* FOOTER */
 
 .footer{
 text-align:center;
@@ -380,11 +326,11 @@ color:#64748b;
 
 <div class="menu">
 
-<a href="atraso-de-voo.html"><i class="fa-solid fa-plane-departure"></i> Atraso</a>
-<a href="cancelamento-de-voo.html"><i class="fa-solid fa-xmark"></i> Cancelamento</a>
-<a href="bagagem-extraviada.html"><i class="fa-solid fa-suitcase"></i> Bagagem</a>
-<a href="overbooking.html"><i class="fa-solid fa-ticket"></i> Overbooking</a>
-<a href="direitos-do-passageiro.html"><i class="fa-solid fa-scale-balanced"></i> Direitos</a>
+<a href="#"><i class="fa-solid fa-plane-departure"></i> Atraso</a>
+<a href="#"><i class="fa-solid fa-xmark"></i> Cancelamento</a>
+<a href="#"><i class="fa-solid fa-suitcase"></i> Bagagem</a>
+<a href="#"><i class="fa-solid fa-ticket"></i> Overbooking</a>
+<a href="#"><i class="fa-solid fa-scale-balanced"></i> Direitos</a>
 
 </div>
 
@@ -483,3 +429,48 @@ target="_blank">
 </div>
 
 </div>
+
+</div>
+
+<div class="footer">
+© 2026 • Direitos do passageiro
+</div>
+
+<!-- PARTICLES -->
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js", {
+
+particles: {
+number:{value:70,density:{enable:true,value_area:900}},
+color:{value:"#22c55e"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3,random:true},
+line_linked:{enable:true,distance:150,color:"#22c55e",opacity:0.3,width:1},
+move:{enable:true,speed:2}
+},
+
+interactivity:{
+detect_on:"canvas",
+events:{
+onhover:{enable:true,mode:"repulse"},
+onclick:{enable:true,mode:"push"}
+},
+modes:{
+repulse:{distance:120},
+push:{particles_nb:4}
+}
+},
+
+retina_detect:true
+
+});
+
+</script>
+
+</body>
+</html>
