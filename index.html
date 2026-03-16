@@ -48,7 +48,7 @@ height:100%;
 z-index:-1;
 }
 
-/* barra topo */
+/* topo */
 
 .topbar{
 background:#16a34a;
@@ -57,8 +57,6 @@ padding:10px;
 font-weight:600;
 font-size:14px;
 }
-
-/* urgência */
 
 .urgency{
 background:#f59e0b;
@@ -96,10 +94,6 @@ font-size:14px;
 opacity:0.8;
 }
 
-.menu a:hover{
-opacity:1;
-}
-
 .cta-nav{
 background:#22c55e;
 padding:10px 18px;
@@ -120,7 +114,6 @@ margin:auto;
 
 .hero h1{
 font-size:46px;
-margin-bottom:10px;
 }
 
 .hero p{
@@ -130,10 +123,11 @@ font-size:18px;
 
 .live-proof{
 margin-top:15px;
-font-size:15px;
 color:#22c55e;
 font-weight:600;
 }
+
+/* botão */
 
 .button-main{
 display:inline-block;
@@ -145,13 +139,6 @@ color:white;
 font-size:20px;
 font-weight:700;
 text-decoration:none;
-box-shadow:0 10px 25px rgba(34,197,94,0.4);
-transition:0.3s;
-}
-
-.button-main:hover{
-transform:translateY(-3px);
-box-shadow:0 15px 35px rgba(34,197,94,0.6);
 }
 
 /* container */
@@ -170,18 +157,14 @@ border:1px solid rgba(255,255,255,0.1);
 border-radius:16px;
 padding:35px;
 margin-top:30px;
-transition:0.3s;
 opacity:0;
 transform:translateY(40px);
+transition:0.3s;
 }
 
 .card.show{
 opacity:1;
 transform:translateY(0);
-}
-
-.card:hover{
-transform:translateY(-5px);
 }
 
 /* grid */
@@ -198,57 +181,48 @@ text-align:center;
 background:rgba(255,255,255,0.05);
 padding:30px;
 border-radius:12px;
-transition:0.3s;
-}
-
-.feature:hover{
-transform:translateY(-5px);
 }
 
 .feature i{
 font-size:34px;
 color:#22c55e;
-margin-bottom:10px;
 }
 
 /* contador */
-
-.counter{
-text-align:center;
-margin-top:20px;
-}
 
 .counter-number{
 font-size:50px;
 color:#22c55e;
 font-weight:700;
-}
-
-/* links artigos */
-
-.card a{
-color:#22c55e;
-text-decoration:none;
-font-weight:600;
-}
-
-.card a:hover{
-text-decoration:underline;
-}
-
-/* redes */
-
-.social{
 text-align:center;
-margin-top:40px;
 }
 
-.social a{
-display:inline-block;
-margin:10px;
-color:white;
-font-size:20px;
-text-decoration:none;
+/* dinheiro */
+
+.money{
+text-align:center;
+margin-top:30px;
+}
+
+.money-number{
+font-size:45px;
+color:#22c55e;
+font-weight:700;
+}
+
+/* notificação */
+
+.notify{
+position:fixed;
+left:20px;
+bottom:120px;
+background:#111827;
+padding:14px 18px;
+border-radius:12px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+font-size:14px;
+z-index:999;
 }
 
 /* botão flutuante */
@@ -258,15 +232,14 @@ position:fixed;
 bottom:90px;
 right:25px;
 background:#22c55e;
-color:white;
 padding:16px 22px;
 border-radius:50px;
+color:white;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-/* barra fixa conversão */
+/* barra fixa */
 
 .bottom-bar{
 position:fixed;
@@ -286,33 +259,11 @@ font-size:18px;
 text-decoration:none;
 }
 
-/* footer */
-
 .footer{
 text-align:center;
 margin-top:60px;
 padding:20px;
 color:#64748b;
-font-size:14px;
-}
-
-/* mobile */
-
-@media(max-width:700px){
-
-.menu{
-display:none;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.button-main{
-font-size:18px;
-padding:16px 35px;
-}
-
 }
 
 </style>
@@ -343,8 +294,7 @@ padding:16px 35px;
 
 <a class="cta-nav"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank"
-rel="noopener">
+target="_blank">
 Verificar Caso
 </a>
 
@@ -354,9 +304,7 @@ Verificar Caso
 
 <h1>Teve problema com voo?</h1>
 
-<p>
-Verifique gratuitamente se você pode receber indenização
-</p>
+<p>Verifique gratuitamente se você pode receber indenização</p>
 
 <div class="live-proof">
 🔥 23 pessoas verificaram possível indenização hoje
@@ -364,8 +312,7 @@ Verifique gratuitamente se você pode receber indenização
 
 <a class="button-main"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank"
-rel="noopener">
+target="_blank">
 
 ✈️ Verificar Meu Caso
 
@@ -401,33 +348,17 @@ rel="noopener">
 
 <div class="card">
 
-<h2>Como funciona</h2>
-
-<p>1️⃣ Clique em verificar caso</p>
-<p>2️⃣ Informe os dados do voo</p>
-<p>3️⃣ Veja se tem direito à compensação</p>
-
-</div>
-
-<div class="card">
-
-<h2>Guias úteis para passageiros</h2>
-
-<p><a href="atraso-de-voo.html">Indenização por atraso de voo</a></p>
-<p><a href="bagagem-extraviada.html">Bagagem extraviada: o que fazer</a></p>
-<p><a href="direitos-do-passageiro.html">Direitos do passageiro</a></p>
-
-</div>
-
-<div class="card">
-
-<div class="counter">
-
 <h2>Pessoas que já resolveram casos</h2>
 
 <div class="counter-number" id="counter">0</div>
 
 </div>
+
+<div class="card money">
+
+<h2>Dinheiro já recuperado por passageiros</h2>
+
+<div class="money-number" id="money">R$0</div>
 
 </div>
 
@@ -446,39 +377,14 @@ A plataforma analisa o caso e informa as opções disponíveis.</p>
 
 </div>
 
-<div class="card">
-
-<h2>Transparência</h2>
-
-<p>
-Esta página é apenas uma indicação para a plataforma LiberFly.
-Não somos responsáveis pelo processo de indenização.
-</p>
-
 </div>
 
-<div class="social">
-
-<h2>Instagram</h2>
-
-<a href="https://www.instagram.com/voosolutions/" target="_blank">
-<i class="fab fa-instagram"></i> VooSolutions
-</a>
-
-<a href="https://www.instagram.com/liberflybr" target="_blank">
-<i class="fab fa-instagram"></i> LiberFly
-</a>
-
-</div>
-
-</div>
+<div id="notify" class="notify"></div>
 
 <a class="floating"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
 target="_blank">
-
 Resolver Agora
-
 </a>
 
 <div class="footer">
@@ -495,15 +401,7 @@ Página de indicação • Parceiro LiberFly
 
 <script>
 
-particlesJS("particles-js",{
-particles:{
-number:{value:60},
-size:{value:3},
-color:{value:"#22c55e"},
-line_linked:{enable:true,color:"#22c55e"},
-move:{speed:1}
-}
-})
+/* contador passageiros */
 
 let counter=document.getElementById("counter")
 let value=0
@@ -513,19 +411,37 @@ function anim(){
 
 value+=Math.floor(Math.random()*200)
 
-if(value>=target){
-value=target
-}
+if(value>=target) value=target
 
 counter.innerText=value.toLocaleString()
 
-if(value<target){
-requestAnimationFrame(anim)
-}
+if(value<target) requestAnimationFrame(anim)
 
 }
 
 anim()
+
+/* contador dinheiro */
+
+let money=0
+let moneyTarget=8500000
+let moneyBox=document.getElementById("money")
+
+function animMoney(){
+
+money+=Math.floor(Math.random()*15000)
+
+if(money>=moneyTarget) money=moneyTarget
+
+moneyBox.innerText="R$ "+money.toLocaleString()
+
+if(money<moneyTarget) requestAnimationFrame(animMoney)
+
+}
+
+animMoney()
+
+/* prova social */
 
 setInterval(()=>{
 
@@ -536,19 +452,30 @@ document.querySelector(".live-proof").innerText=
 
 },5000)
 
-/* animação scroll */
+/* notificações */
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show")
+const nomes=["João","Maria","Carlos","Ana","Pedro","Lucas","Fernanda"]
+const cidades=["São Paulo","Rio de Janeiro","Curitiba","Salvador","Belo Horizonte"]
+
+function mostrarNotificacao(){
+
+let nome=nomes[Math.floor(Math.random()*nomes.length)]
+let cidade=cidades[Math.floor(Math.random()*cidades.length)]
+let valor=Math.floor(Math.random()*2000)+800
+
+let box=document.getElementById("notify")
+
+box.innerHTML="🟢 "+nome+" de "+cidade+" recebeu R$"+valor+" de indenização"
+
+box.style.display="block"
+
+setTimeout(()=>{
+box.style.display="none"
+},5000)
+
 }
-})
-})
 
-document.querySelectorAll(".card").forEach(el=>{
-observer.observe(el)
-})
+setInterval(mostrarNotificacao,15000)
 
 </script>
 
