@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://lucas-programador-lang.github.io/LiberFlyIndica-o/sitemap.xml
