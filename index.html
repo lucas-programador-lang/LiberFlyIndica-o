@@ -75,16 +75,34 @@ font-size:14px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
+padding:18px 30px;
+max-width:1200px;
+margin:auto;
 }
 
 .logo{
 width:90px;
 }
 
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:14px;
+opacity:0.8;
+}
+
+.menu a:hover{
+opacity:1;
+}
+
 .cta-nav{
 background:#22c55e;
-padding:10px 20px;
+padding:10px 18px;
 border-radius:10px;
 text-decoration:none;
 color:white;
@@ -95,13 +113,13 @@ font-weight:600;
 
 .hero{
 text-align:center;
-padding:70px 20px;
+padding:90px 20px;
 max-width:900px;
 margin:auto;
 }
 
 .hero h1{
-font-size:44px;
+font-size:46px;
 margin-bottom:10px;
 }
 
@@ -153,22 +171,17 @@ border-radius:16px;
 padding:35px;
 margin-top:30px;
 transition:0.3s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
 transform:translateY(-5px);
-}
-
-/* links artigos */
-
-.card a{
-color:#22c55e;
-text-decoration:none;
-font-weight:600;
-}
-
-.card a:hover{
-text-decoration:underline;
 }
 
 /* grid */
@@ -183,12 +196,17 @@ margin-top:30px;
 .feature{
 text-align:center;
 background:rgba(255,255,255,0.05);
-padding:25px;
+padding:30px;
 border-radius:12px;
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-5px);
 }
 
 .feature i{
-font-size:32px;
+font-size:34px;
 color:#22c55e;
 margin-bottom:10px;
 }
@@ -204,6 +222,18 @@ margin-top:20px;
 font-size:50px;
 color:#22c55e;
 font-weight:700;
+}
+
+/* links artigos */
+
+.card a{
+color:#22c55e;
+text-decoration:none;
+font-weight:600;
+}
+
+.card a:hover{
+text-decoration:underline;
 }
 
 /* redes */
@@ -248,7 +278,11 @@ font-size:14px;
 
 /* mobile */
 
-@media(max-width:600px){
+@media(max-width:700px){
+
+.menu{
+display:none;
+}
 
 .hero h1{
 font-size:32px;
@@ -280,6 +314,12 @@ padding:16px 35px;
 <div class="nav">
 
 <img src="logo.png" class="logo">
+
+<div class="menu">
+<a href="atraso-de-voo.html">Atraso</a>
+<a href="bagagem-extraviada.html">Bagagem</a>
+<a href="direitos-do-passageiro.html">Direitos</a>
+</div>
 
 <a class="cta-nav"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
@@ -349,33 +389,17 @@ rel="noopener">
 
 </div>
 
-
-<!-- NOVA SEÇÃO PARA SEO -->
-
 <div class="card">
 
 <h2>Guias úteis para passageiros</h2>
 
-<p>
-<a href="atraso-de-voo.html">
-Indenização por atraso de voo
-</a>
-</p>
+<p><a href="atraso-de-voo.html">Indenização por atraso de voo</a></p>
 
-<p>
-<a href="bagagem-extraviada.html">
-Bagagem extraviada: o que fazer
-</a>
-</p>
+<p><a href="bagagem-extraviada.html">Bagagem extraviada: o que fazer</a></p>
 
-<p>
-<a href="direitos-do-passageiro.html">
-Direitos do passageiro
-</a>
-</p>
+<p><a href="direitos-do-passageiro.html">Direitos do passageiro</a></p>
 
 </div>
-
 
 <div class="card">
 
@@ -404,11 +428,11 @@ Não somos responsáveis pelo processo de indenização.
 
 <h2>Instagram</h2>
 
-<a href="https://www.instagram.com/voosolutions/" target="_blank" rel="noopener">
+<a href="https://www.instagram.com/voosolutions/" target="_blank">
 <i class="fab fa-instagram"></i> VooSolutions
 </a>
 
-<a href="https://www.instagram.com/liberflybr" target="_blank" rel="noopener">
+<a href="https://www.instagram.com/liberflybr" target="_blank">
 <i class="fab fa-instagram"></i> LiberFly
 </a>
 
@@ -418,9 +442,10 @@ Não somos responsáveis pelo processo de indenização.
 
 <a class="floating"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank"
-rel="noopener">
+target="_blank">
+
 Resolver Agora
+
 </a>
 
 <div class="footer">
@@ -430,8 +455,6 @@ Página de indicação • Parceiro LiberFly
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
-
-document.addEventListener("DOMContentLoaded",function(){
 
 particlesJS("particles-js",{
 particles:{
@@ -474,6 +497,18 @@ document.querySelector(".live-proof").innerText=
 
 },5000)
 
+/* animação ao rolar */
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+document.querySelectorAll(".card").forEach(el=>{
+observer.observe(el)
 })
 
 </script>
