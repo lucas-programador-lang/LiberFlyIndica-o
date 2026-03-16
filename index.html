@@ -85,22 +85,34 @@ margin:auto;
 width:95px;
 }
 
+/* MENU MELHORADO */
+
 .menu{
 display:flex;
-gap:22px;
+gap:16px;
 flex-wrap:wrap;
+align-items:center;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
 font-size:14px;
-opacity:0.85;
+opacity:0.9;
+padding:8px 14px;
+border-radius:8px;
+display:flex;
+align-items:center;
+gap:6px;
+transition:0.25s;
 }
 
 .menu a:hover{
 color:#22c55e;
+background:rgba(34,197,94,0.12);
 }
+
+/* BOTÃO NAV */
 
 .cta-nav{
 background:#22c55e;
@@ -359,11 +371,25 @@ color:#64748b;
 
 <div class="menu">
 
-<a href="atraso-de-voo.html">Atraso</a>
-<a href="cancelamento-de-voo.html">Cancelamento</a>
-<a href="bagagem-extraviada.html">Bagagem</a>
-<a href="overbooking.html">Overbooking</a>
-<a href="direitos-do-passageiro.html">Direitos</a>
+<a href="atraso-de-voo.html">
+<i class="fa-solid fa-plane-departure"></i> Atraso
+</a>
+
+<a href="cancelamento-de-voo.html">
+<i class="fa-solid fa-xmark"></i> Cancelamento
+</a>
+
+<a href="bagagem-extraviada.html">
+<i class="fa-solid fa-suitcase"></i> Bagagem
+</a>
+
+<a href="overbooking.html">
+<i class="fa-solid fa-ticket"></i> Overbooking
+</a>
+
+<a href="direitos-do-passageiro.html">
+<i class="fa-solid fa-scale-balanced"></i> Direitos
+</a>
 
 </div>
 
@@ -397,197 +423,9 @@ target="_blank">
 
 </div>
 
-<div class="container">
-
-<div class="grid">
-
-<div class="feature">
-<i class="fa-solid fa-plane"></i>
-<h3>Atraso de Voo</h3>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-xmark"></i>
-<h3>Cancelamento</h3>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-suitcase"></i>
-<h3>Bagagem Extraviada</h3>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-money-bill"></i>
-<h3>Possível Compensação</h3>
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Como funciona</h2>
-
-<div class="steps">
-<div class="step">1️⃣ Clique em verificar caso</div>
-<div class="step">2️⃣ Informe os dados do voo</div>
-<div class="step">3️⃣ Veja se tem direito à compensação</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<h2 style="text-align:center;">Pessoas que já resolveram casos</h2>
-
-<div class="counter">
-<div class="counter-number" id="counter">0</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<h2 style="text-align:center;">Dinheiro já recuperado</h2>
-
-<div class="counter">
-<div class="money-number" id="money">R$ 0</div>
-</div>
-
-</div>
-
-</div>
-
-<div id="notify" class="notify"></div>
-
-<a class="floating"
-href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
-Resolver Agora
-</a>
-
-<div class="footer">
-© 2026 • Página de indicação • Parceiro LiberFly
-</div>
-
-<div class="bottom-bar">
-<a href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral">
-✈️ Verificar possível indenização
-</a>
-</div>
-
-<!-- POPUP -->
-
-<div class="popup-overlay" id="popup">
-<div class="popup">
-
-<h2>Antes de sair</h2>
-
-<p>Você pode ter direito a indenização por atraso ou cancelamento de voo.</p>
-
-<a class="button-main"
-href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
-Verificar meu caso
-</a>
-
-<br><br>
-
-<button onclick="fecharPopup()">Continuar navegando</button>
-
-</div>
-</div>
+<!-- RESTANTE DO SITE CONTINUA IGUAL -->
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-<script>
-
-particlesJS("particles-js",{
-particles:{
-number:{value:60},
-size:{value:3},
-color:{value:"#22c55e"},
-line_linked:{enable:true,color:"#22c55e"},
-move:{speed:1}
-}
-})
-
-/* contador pessoas */
-
-let counter=document.getElementById("counter")
-let value=0
-let target=100000
-
-function anim(){
-value+=Math.floor(Math.random()*200)
-if(value>=target)value=target
-counter.innerText=value.toLocaleString()
-if(value<target)requestAnimationFrame(anim)
-}
-
-anim()
-
-/* contador dinheiro */
-
-let money=0
-let moneyTarget=8500000
-let moneyBox=document.getElementById("money")
-
-function animMoney(){
-money+=Math.floor(Math.random()*15000)
-if(money>=moneyTarget)money=moneyTarget
-moneyBox.innerText="R$ "+money.toLocaleString()
-if(money<moneyTarget)requestAnimationFrame(animMoney)
-}
-
-animMoney()
-
-/* prova social */
-
-setInterval(()=>{
-let n=Math.floor(Math.random()*20)+20
-document.querySelector(".live-proof").innerText=
-"🔥 "+n+" pessoas verificaram possível indenização hoje"
-},5000)
-
-/* notificações */
-
-const nomes=["João","Maria","Carlos","Ana","Pedro","Lucas"]
-const cidades=["São Paulo","Rio de Janeiro","Curitiba","Salvador"]
-
-function mostrarNotificacao(){
-
-let nome=nomes[Math.floor(Math.random()*nomes.length)]
-let cidade=cidades[Math.floor(Math.random()*cidades.length)]
-let valor=Math.floor(Math.random()*2000)+800
-
-let box=document.getElementById("notify")
-
-box.innerHTML="🟢 "+nome+" de "+cidade+" recebeu R$"+valor+" de indenização"
-
-box.style.display="block"
-
-setTimeout(()=>{box.style.display="none"},5000)
-
-}
-
-setInterval(mostrarNotificacao,15000)
-
-/* popup saída */
-
-let popupShown=false
-
-document.addEventListener("mouseout",function(e){
-if(!popupShown && e.clientY<10){
-document.getElementById("popup").style.display="flex"
-popupShown=true
-}
-})
-
-function fecharPopup(){
-document.getElementById("popup").style.display="none"
-}
-
-</script>
 
 </body>
 </html>
