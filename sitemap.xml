@@ -4,22 +4,23 @@
 
 <url>
 <loc>https://lucas-programador-lang.github.io/LiberFlyIndica-o/</loc>
-</url>
-
-<url>
-<loc>https://lucas-programador-lang.github.io/LiberFlyIndica-o/index.html</loc>
+<lastmod>2026-03-16</lastmod>
+<priority>1.0</priority>
 </url>
 
 <url>
 <loc>https://lucas-programador-lang.github.io/LiberFlyIndica-o/atraso-de-voo.html</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://lucas-programador-lang.github.io/LiberFlyIndica-o/bagagem-extraviada.html</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://lucas-programador-lang.github.io/LiberFlyIndica-o/direitos-do-passageiro.html</loc>
+<priority>0.8</priority>
 </url>
 
 </urlset>
