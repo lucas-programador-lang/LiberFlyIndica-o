@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Problemas Resolvidos | Indicação LiberFly</title>
+
+<title>Indenização por Atraso de Voo | Verifique se tem Direito</title>
+
+<meta name="description" content="Atraso ou cancelamento de voo? Verifique gratuitamente se você tem direito a indenização.">
+
+<link rel="icon" href="logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -24,6 +32,8 @@ color:white;
 overflow-x:hidden;
 }
 
+/* particles */
+
 #particles-js{
 position:fixed;
 width:100%;
@@ -31,36 +41,74 @@ height:100%;
 z-index:-1;
 }
 
-/* barra prova social */
+/* barra topo */
 
-.proof{
+.topbar{
 background:#16a34a;
 text-align:center;
-padding:12px;
+padding:10px;
 font-weight:600;
 font-size:14px;
 }
 
-/* header */
+/* navbar */
 
-header{
-text-align:center;
-padding:80px 20px;
-animation:fadeDown 1s ease;
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
 }
 
 .logo{
-width:120px;
-margin-bottom:15px;
+width:90px;
 }
 
-h1{
-font-size:42px;
+.cta-nav{
+background:#22c55e;
+padding:10px 20px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:600;
 }
 
-.subtitle{
+/* hero */
+
+.hero{
+text-align:center;
+padding:70px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.hero h1{
+font-size:44px;
+margin-bottom:10px;
+}
+
+.hero p{
 color:#94a3b8;
-margin-top:10px;
+font-size:18px;
+}
+
+.button-main{
+display:inline-block;
+margin-top:30px;
+padding:18px 50px;
+background:linear-gradient(135deg,#22c55e,#16a34a);
+border-radius:14px;
+color:white;
+font-size:20px;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(34,197,94,0.4);
+transition:0.3s;
+}
+
+.button-main:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(34,197,94,0.6);
 }
 
 /* container */
@@ -71,46 +119,24 @@ margin:auto;
 padding:20px;
 }
 
+/* cards */
+
 .card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 border-radius:16px;
 padding:35px;
 margin-top:30px;
-animation:fadeUp 1s ease;
+transition:0.3s;
 }
 
-.card h2{
-margin-bottom:15px;
+.card:hover{
+transform:translateY(-5px);
 }
 
-.card p{
-color:#cbd5f5;
-line-height:1.7;
-}
+/* grid */
 
-/* botão principal */
-
-.button{
-display:inline-block;
-margin-top:25px;
-padding:16px 42px;
-background:#22c55e;
-border-radius:12px;
-color:white;
-font-size:18px;
-text-decoration:none;
-font-weight:600;
-animation:pulse 2s infinite;
-}
-
-.button:hover{
-background:#16a34a;
-}
-
-/* grid benefícios */
-
-.features{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
@@ -125,9 +151,19 @@ border-radius:12px;
 }
 
 .feature i{
-font-size:30px;
+font-size:32px;
 color:#22c55e;
 margin-bottom:10px;
+}
+
+/* passos */
+
+.steps{
+margin-top:40px;
+}
+
+.step{
+margin-bottom:25px;
 }
 
 /* contador */
@@ -138,46 +174,23 @@ margin-top:20px;
 }
 
 .counter-number{
-font-size:48px;
+font-size:50px;
 color:#22c55e;
 font-weight:700;
 }
 
-/* redes sociais */
+/* redes */
 
 .social{
 text-align:center;
 margin-top:40px;
 }
 
-.social-links{
-margin-top:20px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
-}
-
-.social-links a{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:20px;
+.social a{
+display:inline-block;
+margin:10px;
 color:white;
-text-decoration:none;
-background:rgba(255,255,255,0.05);
-padding:12px 20px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.social-links a:hover{
-background:#22c55e;
-transform:scale(1.05);
-}
-
-.social-links i{
-font-size:24px;
+font-size:20px;
 }
 
 /* botão flutuante */
@@ -188,15 +201,11 @@ bottom:25px;
 right:25px;
 background:#22c55e;
 color:white;
-padding:16px 20px;
+padding:16px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.floating:hover{
-background:#16a34a;
 }
 
 /* footer */
@@ -209,22 +218,19 @@ color:#64748b;
 font-size:14px;
 }
 
-/* animações */
+/* mobile */
 
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(40px)}
-to{opacity:1; transform:translateY(0)}
+@media(max-width:600px){
+
+.hero h1{
+font-size:32px;
 }
 
-@keyframes fadeDown{
-from{opacity:0; transform:translateY(-40px)}
-to{opacity:1; transform:translateY(0)}
+.button-main{
+font-size:18px;
+padding:16px 35px;
 }
 
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
 }
 
 </style>
@@ -234,53 +240,50 @@ to{opacity:1; transform:translateY(0)}
 
 <div id="particles-js"></div>
 
-<div class="proof">
-✈️ Mais de 100.000 passageiros já resolveram problemas de voo com a LiberFly
+<div class="topbar">
+✈️ Mais de 100.000 passageiros já resolveram problemas de voo
 </div>
 
-<header>
+<div class="nav">
 
 <img src="logo.png" class="logo">
 
-<h1>Problemas Resolvidos</h1>
-
-<p class="subtitle">
-Indicação para resolver problemas com companhias aéreas
-</p>
-
-<a class="button"
-href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
-
-Resolver Meu Problema
-
+<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
+Verificar Caso
 </a>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h2>✈️ Teve problema com voo nos últimos 5 anos?</h2>
-
-<p>
-Se você sofreu atraso, cancelamento de voo, bagagem extraviada ou overbooking,
-existe a possibilidade de receber compensação.
-</p>
-
-<p>
-Esta página é apenas uma indicação para acessar a plataforma da LiberFly
-e verificar se você tem direito.
-</p>
 
 </div>
 
-<div class="features">
+<div class="hero">
+
+<h1>Teve problema com voo?</h1>
+
+<p>
+Verifique gratuitamente se você pode receber indenização
+</p>
+
+<a class="button-main"
+href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
+target="_blank">
+
+Verificar Meu Caso
+
+</a>
+
+</div>
+
+<div class="container">
+
+<div class="grid">
 
 <div class="feature">
 <i class="fa-solid fa-plane"></i>
-<h3>Atraso ou Cancelamento</h3>
+<h3>Atraso de Voo</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-xmark"></i>
+<h3>Cancelamento</h3>
 </div>
 
 <div class="feature">
@@ -297,10 +300,46 @@ e verificar se você tem direito.
 
 <div class="card">
 
-<div class="counter">
-<h2>Pessoas que já resolveram casos</h2>
-<div class="counter-number" id="counter">0</div>
+<h2>Como funciona</h2>
+
+<div class="steps">
+
+<div class="step">
+1️⃣ Clique no botão verificar caso
 </div>
+
+<div class="step">
+2️⃣ Informe os dados do voo
+</div>
+
+<div class="step">
+3️⃣ Veja se tem direito à compensação
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="counter">
+
+<h2>Pessoas que já resolveram casos</h2>
+
+<div class="counter-number" id="counter">0</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Transparência</h2>
+
+<p>
+Esta página é apenas uma indicação para a plataforma LiberFly.
+Não somos responsáveis pelo processo de indenização.
+</p>
 
 </div>
 
@@ -308,19 +347,13 @@ e verificar se você tem direito.
 
 <h2>Instagram</h2>
 
-<div class="social-links">
-
 <a href="https://www.instagram.com/voosolutions/" target="_blank">
-<i class="fab fa-instagram"></i>
-Instagram (VooSolutions)
+<i class="fab fa-instagram"></i> VooSolutions
 </a>
 
 <a href="https://www.instagram.com/liberflybr" target="_blank">
-<i class="fab fa-instagram"></i>
-Instagram (LiberFly)
+<i class="fab fa-instagram"></i> LiberFly
 </a>
-
-</div>
 
 </div>
 
@@ -352,22 +385,27 @@ move:{speed:1}
 }
 })
 
-let counter = document.getElementById("counter")
-let value = 0
-let target = 100000
+let counter=document.getElementById("counter")
+let value=0
+let target=100000
 
-let interval = setInterval(()=>{
+function anim(){
 
-value += 500
+value+=Math.floor(Math.random()*200)
 
-counter.innerText = value.toLocaleString()
-
-if(value >= target){
-counter.innerText = target.toLocaleString()
-clearInterval(interval)
+if(value>=target){
+value=target
 }
 
-},20)
+counter.innerText=value.toLocaleString()
+
+if(value<target){
+requestAnimationFrame(anim)
+}
+
+}
+
+anim()
 
 </script>
 
