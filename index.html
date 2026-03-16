@@ -39,8 +39,6 @@ color:white;
 overflow-x:hidden;
 }
 
-/* particles */
-
 #particles-js{
 position:fixed;
 width:100%;
@@ -94,6 +92,10 @@ font-size:14px;
 opacity:0.8;
 }
 
+.menu a:hover{
+opacity:1;
+}
+
 .cta-nav{
 background:#22c55e;
 padding:10px 18px;
@@ -114,6 +116,7 @@ margin:auto;
 
 .hero h1{
 font-size:46px;
+margin-bottom:10px;
 }
 
 .hero p{
@@ -139,6 +142,7 @@ color:white;
 font-size:20px;
 font-weight:700;
 text-decoration:none;
+box-shadow:0 10px 25px rgba(34,197,94,0.4);
 }
 
 /* container */
@@ -186,43 +190,35 @@ border-radius:12px;
 .feature i{
 font-size:34px;
 color:#22c55e;
+margin-bottom:10px;
 }
 
 /* contador */
+
+.counter{
+text-align:center;
+margin-top:20px;
+}
 
 .counter-number{
 font-size:50px;
 color:#22c55e;
 font-weight:700;
+}
+
+/* social */
+
+.social{
 text-align:center;
+margin-top:40px;
 }
 
-/* dinheiro */
-
-.money{
-text-align:center;
-margin-top:30px;
-}
-
-.money-number{
-font-size:45px;
-color:#22c55e;
-font-weight:700;
-}
-
-/* notificação */
-
-.notify{
-position:fixed;
-left:20px;
-bottom:120px;
-background:#111827;
-padding:14px 18px;
-border-radius:12px;
-display:none;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-font-size:14px;
-z-index:999;
+.social a{
+display:inline-block;
+margin:10px;
+color:white;
+font-size:20px;
+text-decoration:none;
 }
 
 /* botão flutuante */
@@ -232,9 +228,9 @@ position:fixed;
 bottom:90px;
 right:25px;
 background:#22c55e;
+color:white;
 padding:16px 22px;
 border-radius:50px;
-color:white;
 text-decoration:none;
 font-weight:600;
 }
@@ -257,6 +253,21 @@ color:white;
 font-weight:700;
 font-size:18px;
 text-decoration:none;
+}
+
+/* notificação */
+
+.notify{
+position:fixed;
+left:20px;
+bottom:120px;
+background:#111827;
+padding:14px 18px;
+border-radius:12px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+font-size:14px;
+z-index:999;
 }
 
 .footer{
@@ -294,7 +305,8 @@ color:#64748b;
 
 <a class="cta-nav"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
+target="_blank"
+rel="noopener">
 Verificar Caso
 </a>
 
@@ -304,7 +316,9 @@ Verificar Caso
 
 <h1>Teve problema com voo?</h1>
 
-<p>Verifique gratuitamente se você pode receber indenização</p>
+<p>
+Verifique gratuitamente se você pode receber indenização
+</p>
 
 <div class="live-proof">
 🔥 23 pessoas verificaram possível indenização hoje
@@ -312,7 +326,8 @@ Verificar Caso
 
 <a class="button-main"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 ✈️ Verificar Meu Caso
 
@@ -348,17 +363,33 @@ target="_blank">
 
 <div class="card">
 
+<h2>Como funciona</h2>
+
+<p>1️⃣ Clique em verificar caso</p>
+<p>2️⃣ Informe os dados do voo</p>
+<p>3️⃣ Veja se tem direito à compensação</p>
+
+</div>
+
+<div class="card">
+
+<h2>Guias úteis para passageiros</h2>
+
+<p><a href="atraso-de-voo.html">Indenização por atraso de voo</a></p>
+<p><a href="bagagem-extraviada.html">Bagagem extraviada: o que fazer</a></p>
+<p><a href="direitos-do-passageiro.html">Direitos do passageiro</a></p>
+
+</div>
+
+<div class="card">
+
+<div class="counter">
+
 <h2>Pessoas que já resolveram casos</h2>
 
 <div class="counter-number" id="counter">0</div>
 
 </div>
-
-<div class="card money">
-
-<h2>Dinheiro já recuperado por passageiros</h2>
-
-<div class="money-number" id="money">R$0</div>
 
 </div>
 
@@ -374,6 +405,31 @@ A análise inicial leva poucos minutos.</p>
 
 <p><strong>Preciso entrar com processo?</strong><br>
 A plataforma analisa o caso e informa as opções disponíveis.</p>
+
+</div>
+
+<div class="card">
+
+<h2>Transparência</h2>
+
+<p>
+Esta página é apenas uma indicação para a plataforma LiberFly.
+Não somos responsáveis pelo processo de indenização.
+</p>
+
+</div>
+
+<div class="social">
+
+<h2>Instagram</h2>
+
+<a href="https://www.instagram.com/voosolutions/" target="_blank">
+<i class="fab fa-instagram"></i> VooSolutions
+</a>
+
+<a href="https://www.instagram.com/liberflybr" target="_blank">
+<i class="fab fa-instagram"></i> LiberFly
+</a>
 
 </div>
 
@@ -401,61 +457,48 @@ Página de indicação • Parceiro LiberFly
 
 <script>
 
-/* contador passageiros */
+particlesJS("particles-js",{
+particles:{
+number:{value:60},
+size:{value:3},
+color:{value:"#22c55e"},
+line_linked:{enable:true,color:"#22c55e"},
+move:{speed:1}
+}
+})
 
 let counter=document.getElementById("counter")
 let value=0
 let target=100000
 
 function anim(){
-
 value+=Math.floor(Math.random()*200)
-
-if(value>=target) value=target
-
+if(value>=target){value=target}
 counter.innerText=value.toLocaleString()
-
-if(value<target) requestAnimationFrame(anim)
-
+if(value<target){requestAnimationFrame(anim)}
 }
-
 anim()
 
-/* contador dinheiro */
-
-let money=0
-let moneyTarget=8500000
-let moneyBox=document.getElementById("money")
-
-function animMoney(){
-
-money+=Math.floor(Math.random()*15000)
-
-if(money>=moneyTarget) money=moneyTarget
-
-moneyBox.innerText="R$ "+money.toLocaleString()
-
-if(money<moneyTarget) requestAnimationFrame(animMoney)
-
-}
-
-animMoney()
-
-/* prova social */
-
 setInterval(()=>{
-
 let n=Math.floor(Math.random()*20)+20
-
 document.querySelector(".live-proof").innerText=
 "🔥 "+n+" pessoas verificaram possível indenização hoje"
-
 },5000)
 
-/* notificações */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
 
-const nomes=["João","Maria","Carlos","Ana","Pedro","Lucas","Fernanda"]
-const cidades=["São Paulo","Rio de Janeiro","Curitiba","Salvador","Belo Horizonte"]
+document.querySelectorAll(".card").forEach(el=>{
+observer.observe(el)
+})
+
+const nomes=["João","Maria","Carlos","Ana","Pedro","Lucas"]
+const cidades=["São Paulo","Rio de Janeiro","Curitiba","Salvador"]
 
 function mostrarNotificacao(){
 
