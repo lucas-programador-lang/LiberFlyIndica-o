@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,39 +8,108 @@
 
 <title>Cancelamento de voo: o que fazer e seus direitos</title>
 
-<meta name="description" content="Seu voo foi cancelado? Veja quais são seus direitos e como verificar se pode receber compensação.">
+<meta name="description" content="Seu voo foi cancelado? Entenda quais são os direitos do passageiro e como verificar se pode receber compensação.">
 
 <link rel="icon" href="logo.png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-font-family:Arial;
-max-width:900px;
-margin:auto;
-padding:30px;
 background:#020617;
 color:white;
 line-height:1.7;
+padding:40px 20px;
 }
+
+/* container */
+
+.container{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:40px;
+}
+
+/* título */
 
 h1{
 color:#22c55e;
+font-size:36px;
+margin-bottom:15px;
 }
 
-a{
-color:#22c55e;
-font-weight:bold;
+h2{
+margin-top:30px;
+margin-bottom:10px;
+font-size:22px;
 }
+
+/* texto */
+
+p{
+color:#cbd5f5;
+margin-bottom:15px;
+}
+
+/* botão */
 
 .button{
 display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#22c55e;
+margin-top:25px;
+padding:16px 32px;
+background:linear-gradient(135deg,#22c55e,#16a34a);
 color:white;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(34,197,94,0.3);
+transition:0.2s;
+}
+
+.button:hover{
+transform:translateY(-2px);
+box-shadow:0 15px 30px rgba(34,197,94,0.45);
+}
+
+/* voltar */
+
+.back{
+display:block;
+margin-top:30px;
+color:#22c55e;
+text-decoration:none;
+font-size:14px;
+opacity:0.8;
+}
+
+.back:hover{
+opacity:1;
+}
+
+/* mobile */
+
+@media(max-width:700px){
+
+.container{
+padding:30px 20px;
+}
+
+h1{
+font-size:28px;
+}
+
 }
 
 </style>
@@ -48,29 +118,41 @@ border-radius:10px;
 
 <body>
 
+<div class="container">
+
 <h1>Cancelamento de voo: o que fazer</h1>
 
 <p>
-O cancelamento de voo pode causar diversos transtornos aos passageiros.
-Dependendo da situação, o passageiro pode ter direito a assistência e até compensação.
+O cancelamento de um voo pode causar diversos transtornos aos passageiros, como perda de compromissos, conexões e atrasos na viagem. Quando isso acontece, é importante conhecer os direitos do passageiro e quais alternativas podem ser oferecidas pela companhia aérea.
 </p>
 
 <h2>Direitos do passageiro</h2>
 
 <p>
-Quando um voo é cancelado, a companhia aérea deve oferecer alternativas como reacomodação em outro voo ou reembolso.
-Em alguns casos, também podem ser oferecidos alimentação e hospedagem.
+Quando um voo é cancelado, a companhia aérea normalmente deve oferecer opções como reacomodação em outro voo ou reembolso da passagem. Dependendo do tempo de espera e da situação, também podem ser oferecidos alimentação, comunicação e até hospedagem.
 </p>
 
 <h2>É possível receber compensação?</h2>
 
 <p>
-Se o cancelamento gerou prejuízo ou grande atraso na chegada ao destino, pode ser possível verificar se existe direito a compensação.
+Em alguns casos, quando o cancelamento causa grande atraso na chegada ao destino ou prejuízos ao passageiro, pode ser possível verificar se existe direito a compensação financeira.
 </p>
 
-<a class="button" href="index.html">
+<h2>Como verificar</h2>
+
+<p>
+Existem plataformas especializadas que analisam os dados do voo e verificam se existe possibilidade de compensação de acordo com a situação apresentada.
+</p>
+
+<a class="button" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral">
 Verificar possível indenização
 </a>
+
+<a class="back" href="index.html">
+← Voltar para página inicial
+</a>
+
+</div>
 
 </body>
 </html>
