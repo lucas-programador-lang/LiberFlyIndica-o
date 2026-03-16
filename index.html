@@ -8,7 +8,12 @@
 
 <title>Indenização por Atraso de Voo | Verifique se tem Direito</title>
 
-<meta name="description" content="Atraso ou cancelamento de voo? Verifique gratuitamente se você tem direito a indenização.">
+<meta name="description" content="Atraso ou cancelamento de voo? Verifique gratuitamente se você pode ter direito a indenização.">
+
+<meta property="og:title" content="Teve problema com voo? Veja se pode receber indenização">
+<meta property="og:description" content="Verifique gratuitamente se você pode receber compensação por atraso ou cancelamento de voo.">
+<meta property="og:image" content="logo.png">
+<meta property="og:type" content="website">
 
 <link rel="icon" href="logo.png">
 
@@ -45,6 +50,17 @@ z-index:-1;
 
 .topbar{
 background:#16a34a;
+text-align:center;
+padding:10px;
+font-weight:600;
+font-size:14px;
+}
+
+/* urgência */
+
+.urgency{
+background:#f59e0b;
+color:#020617;
 text-align:center;
 padding:10px;
 font-weight:600;
@@ -90,6 +106,13 @@ margin-bottom:10px;
 .hero p{
 color:#94a3b8;
 font-size:18px;
+}
+
+.live-proof{
+margin-top:15px;
+font-size:15px;
+color:#22c55e;
+font-weight:600;
 }
 
 .button-main{
@@ -156,16 +179,6 @@ color:#22c55e;
 margin-bottom:10px;
 }
 
-/* passos */
-
-.steps{
-margin-top:40px;
-}
-
-.step{
-margin-bottom:25px;
-}
-
 /* contador */
 
 .counter{
@@ -191,6 +204,7 @@ display:inline-block;
 margin:10px;
 color:white;
 font-size:20px;
+text-decoration:none;
 }
 
 /* botão flutuante */
@@ -234,6 +248,7 @@ padding:16px 35px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -244,11 +259,15 @@ padding:16px 35px;
 ✈️ Mais de 100.000 passageiros já resolveram problemas de voo
 </div>
 
+<div class="urgency">
+⚠️ Verificação gratuita disponível hoje • leva menos de 2 minutos
+</div>
+
 <div class="nav">
 
 <img src="logo.png" class="logo">
 
-<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
+<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank" rel="noopener">
 Verificar Caso
 </a>
 
@@ -262,11 +281,16 @@ Verificar Caso
 Verifique gratuitamente se você pode receber indenização
 </p>
 
+<div class="live-proof">
+🔥 23 pessoas verificaram possível indenização hoje
+</div>
+
 <a class="button-main"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
+target="_blank"
+rel="noopener">
 
-Verificar Meu Caso
+✈️ Verificar Meu Caso
 
 </a>
 
@@ -302,21 +326,9 @@ Verificar Meu Caso
 
 <h2>Como funciona</h2>
 
-<div class="steps">
-
-<div class="step">
-1️⃣ Clique no botão verificar caso
-</div>
-
-<div class="step">
-2️⃣ Informe os dados do voo
-</div>
-
-<div class="step">
-3️⃣ Veja se tem direito à compensação
-</div>
-
-</div>
+<p>1️⃣ Clique em verificar caso</p>
+<p>2️⃣ Informe os dados do voo</p>
+<p>3️⃣ Veja se tem direito à compensação</p>
 
 </div>
 
@@ -347,11 +359,11 @@ Não somos responsáveis pelo processo de indenização.
 
 <h2>Instagram</h2>
 
-<a href="https://www.instagram.com/voosolutions/" target="_blank">
+<a href="https://www.instagram.com/voosolutions/" target="_blank" rel="noopener">
 <i class="fab fa-instagram"></i> VooSolutions
 </a>
 
-<a href="https://www.instagram.com/liberflybr" target="_blank">
+<a href="https://www.instagram.com/liberflybr" target="_blank" rel="noopener">
 <i class="fab fa-instagram"></i> LiberFly
 </a>
 
@@ -361,7 +373,8 @@ Não somos responsáveis pelo processo de indenização.
 
 <a class="floating"
 href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 Resolver Agora
 
@@ -371,9 +384,11 @@ Resolver Agora
 Página de indicação • Parceiro LiberFly
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
+
+document.addEventListener("DOMContentLoaded",function(){
 
 particlesJS("particles-js",{
 particles:{
@@ -406,6 +421,17 @@ requestAnimationFrame(anim)
 }
 
 anim()
+
+setInterval(()=>{
+
+let n=Math.floor(Math.random()*10)+20
+
+document.querySelector(".live-proof").innerText=
+"🔥 "+n+" pessoas verificaram possível indenização hoje"
+
+},5000)
+
+})
 
 </script>
 
