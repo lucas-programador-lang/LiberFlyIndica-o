@@ -255,7 +255,7 @@ text-decoration:none;
 
 .floating{
 position:fixed;
-bottom:25px;
+bottom:90px;
 right:25px;
 background:#22c55e;
 color:white;
@@ -264,6 +264,26 @@ border-radius:50px;
 text-decoration:none;
 font-weight:600;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* barra fixa conversão */
+
+.bottom-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#22c55e;
+text-align:center;
+padding:15px;
+z-index:999;
+}
+
+.bottom-bar a{
+color:white;
+font-weight:700;
+font-size:18px;
+text-decoration:none;
 }
 
 /* footer */
@@ -394,9 +414,7 @@ rel="noopener">
 <h2>Guias úteis para passageiros</h2>
 
 <p><a href="atraso-de-voo.html">Indenização por atraso de voo</a></p>
-
 <p><a href="bagagem-extraviada.html">Bagagem extraviada: o que fazer</a></p>
-
 <p><a href="direitos-do-passageiro.html">Direitos do passageiro</a></p>
 
 </div>
@@ -410,6 +428,21 @@ rel="noopener">
 <div class="counter-number" id="counter">0</div>
 
 </div>
+
+</div>
+
+<div class="card">
+
+<h2>Perguntas frequentes</h2>
+
+<p><strong>Quanto custa verificar o caso?</strong><br>
+A verificação normalmente é gratuita.</p>
+
+<p><strong>Quanto tempo leva?</strong><br>
+A análise inicial leva poucos minutos.</p>
+
+<p><strong>Preciso entrar com processo?</strong><br>
+A plataforma analisa o caso e informa as opções disponíveis.</p>
 
 </div>
 
@@ -452,6 +485,12 @@ Resolver Agora
 Página de indicação • Parceiro LiberFly
 </div>
 
+<div class="bottom-bar">
+<a href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
+✈️ Verificar possível indenização
+</a>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
@@ -490,14 +529,14 @@ anim()
 
 setInterval(()=>{
 
-let n=Math.floor(Math.random()*10)+20
+let n=Math.floor(Math.random()*20)+20
 
 document.querySelector(".live-proof").innerText=
 "🔥 "+n+" pessoas verificaram possível indenização hoje"
 
 },5000)
 
-/* animação ao rolar */
+/* animação scroll */
 
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
