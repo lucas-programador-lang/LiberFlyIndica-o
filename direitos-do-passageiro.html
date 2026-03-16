@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,31 +8,108 @@
 
 <title>Direitos do passageiro aéreo</title>
 
-<meta name="description" content="Conheça os direitos do passageiro aéreo em casos de atraso, cancelamento e extravio de bagagem.">
+<meta name="description" content="Conheça os direitos do passageiro aéreo em casos de atraso de voo, cancelamento e extravio de bagagem.">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+<link rel="icon" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family:Poppins;
-background:#020617;
-color:white;
-max-width:900px;
-margin:auto;
-padding:30px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
+body{
+background:#020617;
+color:white;
+line-height:1.7;
+padding:40px 20px;
+}
+
+/* container */
+
+.container{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:40px;
+}
+
+/* títulos */
+
 h1{
-margin-bottom:20px;
+color:#22c55e;
+font-size:36px;
+margin-bottom:15px;
 }
 
 h2{
 margin-top:30px;
+margin-bottom:10px;
+font-size:22px;
 }
 
-a{
+/* texto */
+
+p{
+color:#cbd5f5;
+margin-bottom:15px;
+}
+
+/* botão */
+
+.button{
+display:inline-block;
+margin-top:25px;
+padding:16px 32px;
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(34,197,94,0.3);
+transition:0.2s;
+}
+
+.button:hover{
+transform:translateY(-2px);
+box-shadow:0 15px 30px rgba(34,197,94,0.45);
+}
+
+/* voltar */
+
+.back{
+display:block;
+margin-top:30px;
 color:#22c55e;
+text-decoration:none;
+font-size:14px;
+opacity:0.8;
+}
+
+.back:hover{
+opacity:1;
+}
+
+/* mobile */
+
+@media(max-width:700px){
+
+.container{
+padding:30px 20px;
+}
+
+h1{
+font-size:28px;
+}
+
 }
 
 </style>
@@ -40,39 +118,47 @@ color:#22c55e;
 
 <body>
 
+<div class="container">
+
 <h1>Direitos do passageiro aéreo</h1>
 
 <p>
-Os passageiros de voos possuem direitos garantidos em diversas situações, como atrasos, cancelamentos e extravio de bagagem.
+Os passageiros de voos possuem direitos garantidos em diversas situações, como atrasos, cancelamentos e extravio de bagagem. Conhecer esses direitos pode ajudar o passageiro a lidar melhor com problemas durante a viagem.
 </p>
 
 <h2>Atrasos de voo</h2>
 
 <p>
-Quando o atraso ultrapassa determinado tempo, a companhia aérea deve oferecer assistência ao passageiro.
+Quando um voo sofre atraso significativo, a companhia aérea pode ser responsável por oferecer assistência ao passageiro. Dependendo do tempo de espera, podem ser oferecidos comunicação, alimentação e até hospedagem.
 </p>
 
 <h2>Cancelamentos</h2>
 
 <p>
-Nos casos de cancelamento, o passageiro pode ter direito a reacomodação ou reembolso.
+Nos casos de cancelamento de voo, o passageiro normalmente deve receber opções como reacomodação em outro voo ou reembolso da passagem. A assistência também pode ser oferecida durante o período de espera.
 </p>
 
 <h2>Extravio de bagagem</h2>
 
 <p>
-Quando a bagagem é perdida ou danificada, a companhia aérea pode ser responsável por indenizar o passageiro.
+Quando a bagagem é perdida, extraviada ou danificada, a companhia aérea pode ser responsável por resolver o problema e, em determinadas situações, o passageiro pode ter direito a compensação.
 </p>
 
+<h2>Verificar possível compensação</h2>
+
 <p>
-<a href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral">
+Dependendo do ocorrido durante a viagem, pode ser possível verificar se existe direito a compensação financeira.
+</p>
+
+<a class="button" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
 Verificar possível indenização
 </a>
-</p>
 
-<p>
-<a href="index.html">← Voltar para página inicial</a>
-</p>
+<a class="back" href="index.html">
+← Voltar para página inicial
+</a>
+
+</div>
 
 </body>
 </html>
