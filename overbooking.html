@@ -8,15 +8,16 @@
 
 <title>Overbooking: quando o voo está lotado</title>
 
-<meta name="description" content="Entenda o que é overbooking, quando acontece e quais são os direitos do passageiro quando o voo está lotado.">
+<meta name="description" content="Entenda o overbooking e como verificar possível indenização.">
 
 <link rel="icon" href="logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -28,25 +29,73 @@ body{
 background:#020617;
 color:white;
 line-height:1.7;
-padding:40px 20px;
 }
 
-/* container */
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+max-width:1200px;
+margin:auto;
+position:sticky;
+top:0;
+background:#020617;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
 
+.logo{
+width:80px;
+}
+
+.menu{
+display:flex;
+gap:12px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.menu a:hover{
+background:#22c55e;
+}
+
+.cta-nav{
+background:#22c55e;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+.menu-toggle{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* CONTAINER */
 .container{
 max-width:900px;
-margin:auto;
+margin:40px auto;
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:16px;
 padding:40px;
 }
 
-/* título */
-
+/* TITULOS */
 h1{
 color:#22c55e;
-font-size:36px;
+font-size:34px;
 margin-bottom:15px;
 }
 
@@ -56,58 +105,79 @@ margin-bottom:10px;
 font-size:22px;
 }
 
-/* texto */
-
+/* TEXTO */
 p{
 color:#cbd5f5;
 margin-bottom:15px;
 }
 
-/* botão */
-
+/* BOTÃO */
 .button{
 display:inline-block;
 margin-top:25px;
 padding:16px 32px;
-background:linear-gradient(135deg,#22c55e,#16a34a);
+background:#22c55e;
 color:white;
 text-decoration:none;
-border-radius:12px;
+border-radius:10px;
 font-weight:600;
-box-shadow:0 10px 25px rgba(34,197,94,0.3);
 transition:0.2s;
 }
 
 .button:hover{
-transform:translateY(-2px);
-box-shadow:0 15px 30px rgba(34,197,94,0.45);
+transform:scale(1.05);
 }
 
-/* voltar */
-
+/* VOLTAR */
 .back{
 display:block;
 margin-top:30px;
 color:#22c55e;
 text-decoration:none;
 font-size:14px;
-opacity:0.8;
 }
 
-.back:hover{
-opacity:1;
+/* FOOTER */
+.footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+color:#64748b;
 }
 
-/* mobile */
+/* MOBILE */
+@media(max-width:768px){
 
-@media(max-width:700px){
+.menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#020617;
+flex-direction:column;
+display:none;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.cta-nav{
+display:none;
+}
 
 .container{
-padding:30px 20px;
+margin:20px;
+padding:25px;
 }
 
 h1{
-font-size:28px;
+font-size:26px;
 }
 
 }
@@ -118,30 +188,52 @@ font-size:28px;
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+
+<img src="logo.png" class="logo">
+
+<div class="menu" id="menu">
+<a href="atraso-de-voo.html">Atraso</a>
+<a href="cancelamento-de-voo.html">Cancelamento</a>
+<a href="bagagem-extraviada.html">Bagagem</a>
+<a href="overbooking.html">Overbooking</a>
+<a href="direitos-do-passageiro.html">Direitos</a>
+</div>
+
+<i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>
+
+<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
+Verificar Caso
+</a>
+
+</div>
+
+<!-- CONTEÚDO -->
 <div class="container">
 
 <h1>Overbooking: o que é e como funciona</h1>
 
 <p>
-O overbooking acontece quando uma companhia aérea vende mais passagens do que o número de assentos disponíveis no avião. Essa prática pode fazer com que alguns passageiros não consigam embarcar no voo originalmente reservado.
+O overbooking acontece quando a companhia aérea vende mais passagens do que o número de assentos disponíveis, podendo impedir o embarque de passageiros.
 </p>
 
-<h2>Por que o overbooking acontece</h2>
+<h2>Por que isso acontece?</h2>
 
 <p>
-Algumas empresas aéreas utilizam essa prática porque é comum que alguns passageiros não compareçam para embarcar. No entanto, quando todos os passageiros comparecem, pode ocorrer a situação de falta de assentos.
+As companhias fazem isso porque muitos passageiros não comparecem. Quando todos aparecem, ocorre falta de assentos.
 </p>
 
 <h2>Direitos do passageiro</h2>
 
 <p>
-Em casos de overbooking, a companhia aérea deve oferecer alternativas ao passageiro, como reacomodação em outro voo, reembolso ou assistência durante o período de espera, dependendo da situação.
+Você pode ter direito a reacomodação, reembolso e assistência durante a espera.
 </p>
 
-<h2>Verificar possível compensação</h2>
+<h2>Possível indenização</h2>
 
 <p>
-Dependendo das circunstâncias do voo, pode ser possível verificar se existe direito a compensação pela situação enfrentada.
+Dependendo do caso, é possível receber compensação financeira.
 </p>
 
 <a class="button" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
@@ -153,6 +245,16 @@ Verificar possível indenização
 </a>
 
 </div>
+
+<div class="footer">
+© 2026 • Direitos do passageiro
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
