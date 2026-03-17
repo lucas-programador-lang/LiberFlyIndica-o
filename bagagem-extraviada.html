@@ -8,15 +8,16 @@
 
 <title>Bagagem extraviada | O que fazer</title>
 
-<meta name="description" content="Saiba o que fazer quando sua bagagem é extraviada em um voo e como verificar se existe possibilidade de compensação.">
+<meta name="description" content="Saiba o que fazer quando sua bagagem é extraviada e como verificar possível indenização.">
 
 <link rel="icon" href="logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -28,25 +29,73 @@ body{
 background:#020617;
 color:white;
 line-height:1.7;
-padding:40px 20px;
 }
 
-/* container */
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+max-width:1200px;
+margin:auto;
+position:sticky;
+top:0;
+background:#020617;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
 
+.logo{
+width:80px;
+}
+
+.menu{
+display:flex;
+gap:12px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.menu a:hover{
+background:#22c55e;
+}
+
+.cta-nav{
+background:#22c55e;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+.menu-toggle{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* CONTAINER */
 .container{
 max-width:900px;
-margin:auto;
+margin:40px auto;
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:16px;
 padding:40px;
 }
 
-/* títulos */
-
+/* TITULOS */
 h1{
 color:#22c55e;
-font-size:36px;
+font-size:34px;
 margin-bottom:15px;
 }
 
@@ -56,15 +105,13 @@ margin-bottom:10px;
 font-size:22px;
 }
 
-/* texto */
-
+/* TEXTO */
 p{
 color:#cbd5f5;
 margin-bottom:15px;
 }
 
-/* lista */
-
+/* LISTA */
 ul{
 margin-left:20px;
 margin-bottom:20px;
@@ -74,51 +121,73 @@ li{
 margin-bottom:8px;
 }
 
-/* botão */
-
+/* BOTÃO */
 .button{
 display:inline-block;
 margin-top:25px;
 padding:16px 32px;
-background:linear-gradient(135deg,#22c55e,#16a34a);
+background:#22c55e;
 color:white;
 text-decoration:none;
-border-radius:12px;
+border-radius:10px;
 font-weight:600;
-box-shadow:0 10px 25px rgba(34,197,94,0.3);
 transition:0.2s;
 }
 
 .button:hover{
-transform:translateY(-2px);
-box-shadow:0 15px 30px rgba(34,197,94,0.45);
+transform:scale(1.05);
 }
 
-/* voltar */
-
+/* VOLTAR */
 .back{
 display:block;
 margin-top:30px;
 color:#22c55e;
 text-decoration:none;
 font-size:14px;
-opacity:0.8;
 }
 
-.back:hover{
-opacity:1;
+/* FOOTER */
+.footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+color:#64748b;
 }
 
-/* mobile */
+/* MOBILE */
+@media(max-width:768px){
 
-@media(max-width:700px){
+.menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#020617;
+flex-direction:column;
+display:none;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.cta-nav{
+display:none;
+}
 
 .container{
-padding:30px 20px;
+margin:20px;
+padding:25px;
 }
 
 h1{
-font-size:28px;
+font-size:26px;
 }
 
 }
@@ -129,37 +198,55 @@ font-size:28px;
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+
+<img src="logo.png" class="logo">
+
+<div class="menu" id="menu">
+<a href="atraso-de-voo.html">Atraso</a>
+<a href="cancelamento-de-voo.html">Cancelamento</a>
+<a href="bagagem-extraviada.html">Bagagem</a>
+<a href="overbooking.html">Overbooking</a>
+<a href="direitos-do-passageiro.html">Direitos</a>
+</div>
+
+<i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>
+
+<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
+Verificar Caso
+</a>
+
+</div>
+
+<!-- CONTEÚDO -->
 <div class="container">
 
 <h1>Bagagem extraviada: o que fazer</h1>
 
 <p>
-O extravio de bagagem é uma situação frustrante para muitos passageiros. Quando isso acontece durante uma viagem aérea, é importante agir rapidamente para registrar a ocorrência e iniciar o processo de localização da bagagem.
+O extravio de bagagem é uma situação frustrante. Quando isso acontece, é essencial agir rápido para aumentar as chances de recuperação.
 </p>
 
 <h2>Passos importantes</h2>
 
-<p>
-Caso sua bagagem não apareça na esteira após o voo, alguns passos podem ajudar a resolver o problema:
-</p>
-
 <ul>
-<li>Informar imediatamente a companhia aérea no aeroporto</li>
-<li>Registrar a ocorrência no balcão de atendimento da empresa</li>
-<li>Guardar todos os documentos do voo e comprovantes</li>
-<li>Acompanhar o processo de localização da bagagem</li>
+<li>Comunique a companhia aérea imediatamente</li>
+<li>Registre a ocorrência no aeroporto</li>
+<li>Guarde comprovantes e documentos</li>
+<li>Acompanhe o processo de localização</li>
 </ul>
 
 <h2>Direito a compensação</h2>
 
 <p>
-Dependendo da situação e do tempo que a bagagem permanece extraviada, o passageiro pode ter direito a compensação ou reembolso por prejuízos causados.
+Se a bagagem demorar ou não for encontrada, pode existir direito a indenização pelos prejuízos.
 </p>
 
-<h2>Como verificar a possibilidade de indenização</h2>
+<h2>Como verificar</h2>
 
 <p>
-Hoje existem plataformas que analisam o caso e informam se existe possibilidade de compensação financeira.
+Você pode verificar gratuitamente através de plataformas especializadas.
 </p>
 
 <a class="button" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
@@ -171,6 +258,16 @@ Verificar possível indenização
 </a>
 
 </div>
+
+<div class="footer">
+© 2026 • Direitos do passageiro
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
