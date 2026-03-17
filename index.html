@@ -6,26 +6,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="CitalqAEApfKprVY8PO0NNylOvDMVBLkp8lb-Kmz5Gc"/>
-
 <title>Indenização por Atraso de Voo | Verifique se tem Direito</title>
-
-<meta name="description" content="Atraso ou cancelamento de voo? Verifique gratuitamente se você pode ter direito a indenização.">
-
-<meta property="og:title" content="Teve problema com voo? Veja se pode receber indenização">
-<meta property="og:description" content="Verifique gratuitamente se você pode receber compensação por atraso ou cancelamento de voo.">
-<meta property="og:image" content="logo.png">
-<meta property="og:type" content="website">
 
 <link rel="icon" href="logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -34,37 +24,18 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(270deg,#020617,#020617,#021427,#020617);
-background-size:400% 400%;
-animation:bgmove 18s ease infinite;
+background:#020617;
 color:white;
 overflow-x:hidden;
 padding-bottom:90px;
 }
 
-@keyframes bgmove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
-/* PARTICLES */
-
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
-}
-
 /* BARRAS */
-
 .topbar{
 background:#16a34a;
 text-align:center;
 padding:10px;
-font-weight:600;
-font-size:14px;
+font-size:13px;
 }
 
 .urgency{
@@ -72,117 +43,97 @@ background:#f59e0b;
 color:#020617;
 text-align:center;
 padding:10px;
-font-weight:600;
-font-size:14px;
+font-size:13px;
 }
 
 /* NAV */
-
 .nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 30px;
+padding:15px 20px;
 max-width:1200px;
 margin:auto;
 position:sticky;
 top:0;
 background:#020617;
 z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .logo{
-width:95px;
+width:80px;
 }
 
+/* MENU */
 .menu{
 display:flex;
-gap:16px;
-flex-wrap:wrap;
-align-items:center;
+gap:10px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
 font-size:14px;
-opacity:0.9;
-padding:8px 14px;
-border-radius:8px;
-display:flex;
-align-items:center;
-gap:6px;
-transition:0.3s;
+padding:6px 10px;
+border-radius:6px;
 }
 
 .menu a:hover{
-color:#22c55e;
-background:rgba(34,197,94,0.12);
+background:#22c55e;
 }
 
+/* BOTÃO NAV */
 .cta-nav{
 background:#22c55e;
-padding:10px 20px;
-border-radius:10px;
+padding:8px 14px;
+border-radius:8px;
 text-decoration:none;
 color:white;
-font-weight:600;
-transition:0.3s;
+font-size:14px;
 }
 
-.cta-nav:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 30px rgba(34,197,94,0.4);
+/* BOTÃO MENU MOBILE */
+.menu-toggle{
+display:none;
+font-size:22px;
+cursor:pointer;
 }
 
 /* HERO */
-
 .hero{
 text-align:center;
-padding:100px 20px 70px;
+padding:80px 20px 50px;
 max-width:900px;
 margin:auto;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:12px;
+font-size:42px;
 }
 
 .hero p{
 color:#94a3b8;
-font-size:19px;
+font-size:18px;
+margin-top:10px;
 }
 
 .live-proof{
-margin-top:16px;
+margin-top:15px;
 color:#22c55e;
-font-weight:600;
 }
-
-/* BOTÃO */
 
 .button-main{
 display:inline-block;
-margin-top:35px;
-padding:18px 55px;
-background:linear-gradient(135deg,#22c55e,#16a34a);
-border-radius:14px;
+margin-top:25px;
+padding:16px 40px;
+background:#22c55e;
+border-radius:10px;
 color:white;
-font-size:20px;
-font-weight:700;
+font-size:18px;
 text-decoration:none;
-box-shadow:0 10px 30px rgba(34,197,94,0.35);
-transition:0.3s;
-}
-
-.button-main:hover{
-transform:scale(1.05);
 }
 
 /* CONTAINER */
-
 .container{
 max-width:1100px;
 margin:auto;
@@ -190,146 +141,99 @@ padding:20px;
 }
 
 /* GRID */
-
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
 margin-top:30px;
 }
 
 .feature{
 text-align:center;
-background:rgba(255,255,255,0.05);
-padding:35px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,0.06);
-transition:0.3s;
-opacity:0;
-transform:translateY(40px);
-}
-
-.feature.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.feature:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+background:#111827;
+padding:25px;
+border-radius:10px;
 }
 
 .feature i{
-font-size:36px;
+font-size:30px;
 color:#22c55e;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 /* CARD */
-
 .card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:16px;
-padding:35px;
+background:#111827;
+padding:25px;
+border-radius:10px;
 margin-top:30px;
-opacity:0;
-transform:translateY(40px);
-transition:0.6s;
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
 }
 
 .steps{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:20px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+margin-top:15px;
 }
 
-.step{
-background:rgba(255,255,255,0.04);
-padding:20px;
-border-radius:12px;
-transition:0.3s;
-}
-
-.step:hover{
-background:rgba(255,255,255,0.08);
-}
-
-/* TESTIMONIALS */
-
-.testimonials{
-margin-top:40px;
-opacity:0;
-transform:translateY(40px);
-transition:0.6s;
-}
-
-.testimonials.show{
-opacity:1;
-transform:translateY(0);
-}
-
+/* TESTIMONIAL */
 .testimonial-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
 margin-top:20px;
 }
 
 .testimonial{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:12px;
-border:1px solid rgba(255,255,255,0.06);
-transition:0.3s;
+background:#111827;
+padding:20px;
+border-radius:10px;
 }
 
-.testimonial:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-.stars{
-color:#fbbf24;
-margin-bottom:6px;
-}
-
+/* FOOTER */
 .footer{
 text-align:center;
-margin-top:60px;
-padding:25px;
+margin-top:50px;
+padding:20px;
 color:#64748b;
 }
 
-/* RESPONSIVO */
+/* ================= MOBILE ================= */
+@media(max-width:768px){
 
-@media (max-width:768px){
+.menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#020617;
+flex-direction:column;
+display:none;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
 
 .hero h1{
-font-size:34px;
+font-size:28px;
 }
 
 .hero p{
-font-size:16px;
-}
-
-.menu{
-display:none;
-}
-
-.nav{
-justify-content:space-between;
+font-size:15px;
 }
 
 .button-main{
-font-size:18px;
-padding:16px 35px;
+width:100%;
+}
+
+.cta-nav{
+display:none;
 }
 
 }
@@ -340,33 +244,29 @@ padding:16px 35px;
 
 <body>
 
-<div id="particles-js"></div>
-
 <div class="topbar">
 ✈️ Mais de 100.000 passageiros já resolveram problemas de voo
 </div>
 
 <div class="urgency">
-⚠️ Verificação gratuita disponível hoje • leva menos de 2 minutos
+⚠️ Verificação gratuita disponível hoje
 </div>
 
 <div class="nav">
 
 <img src="logo.png" class="logo">
 
-<div class="menu">
-
-<a href="atraso-de-voo.html"><i class="fa-solid fa-plane-departure"></i> Atraso</a>
-<a href="cancelamento-de-voo.html"><i class="fa-solid fa-xmark"></i> Cancelamento</a>
-<a href="bagagem-extraviada.html"><i class="fa-solid fa-suitcase"></i> Bagagem</a>
-<a href="overbooking.html"><i class="fa-solid fa-ticket"></i> Overbooking</a>
-<a href="direitos-do-passageiro.html"><i class="fa-solid fa-scale-balanced"></i> Direitos</a>
-
+<div class="menu" id="menu">
+<a href="#">Atraso</a>
+<a href="#">Cancelamento</a>
+<a href="#">Bagagem</a>
+<a href="#">Overbooking</a>
+<a href="#">Direitos</a>
 </div>
 
-<a class="cta-nav"
-href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
+<i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>
+
+<a class="cta-nav" href="#" target="_blank">
 Verificar Caso
 </a>
 
@@ -379,12 +279,10 @@ Verificar Caso
 <p>Verifique gratuitamente se você pode receber indenização</p>
 
 <div class="live-proof">
-🔥 23 pessoas verificaram possível indenização hoje
+🔥 Pessoas verificando agora
 </div>
 
-<a class="button-main"
-href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral"
-target="_blank">
+<a class="button-main" href="#" target="_blank">
 ✈️ Verificar Meu Caso
 </a>
 
@@ -406,12 +304,12 @@ target="_blank">
 
 <div class="feature">
 <i class="fa-solid fa-suitcase"></i>
-<h3>Bagagem Extraviada</h3>
+<h3>Bagagem</h3>
 </div>
 
 <div class="feature">
 <i class="fa-solid fa-money-bill"></i>
-<h3>Possível Compensação</h3>
+<h3>Compensação</h3>
 </div>
 
 </div>
@@ -421,37 +319,25 @@ target="_blank">
 <h2>Como funciona</h2>
 
 <div class="steps">
-<div class="step">1️⃣ Clique em verificar caso</div>
-<div class="step">2️⃣ Informe os dados do voo</div>
-<div class="step">3️⃣ Veja se tem direito à compensação</div>
+<div>1️⃣ Clique no botão</div>
+<div>2️⃣ Informe dados</div>
+<div>3️⃣ Veja se tem direito</div>
 </div>
 
 </div>
-
-<div class="testimonials">
-
-<h2 style="text-align:center;">Avaliações de passageiros</h2>
 
 <div class="testimonial-grid">
 
 <div class="testimonial">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Meu voo atrasou e consegui R$ 1.800 de indenização."</p>
-<b>João • SP</b>
+⭐⭐⭐⭐⭐<br>
+"Recebi R$1800"<br>
+<b>João</b>
 </div>
 
 <div class="testimonial">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Não sabia que tinha direito, recebi R$ 1.250."</p>
-<b>Ana • Curitiba</b>
-</div>
-
-<div class="testimonial">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Processo simples e rápido."</p>
-<b>Carlos • Salvador</b>
-</div>
-
+⭐⭐⭐⭐⭐<br>
+"Processo rápido"<br>
+<b>Ana</b>
 </div>
 
 </div>
@@ -459,57 +345,13 @@ target="_blank">
 </div>
 
 <div class="footer">
-© 2026 • Direitos do passageiro
+© 2026
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 <script>
-
-/* PARTICLES */
-
-particlesJS("particles-js", {
-
-particles:{
-number:{value:80,density:{enable:true,value_area:900}},
-color:{value:"#22c55e"},
-shape:{type:"circle"},
-opacity:{value:0.5},
-size:{value:3,random:true},
-line_linked:{enable:true,distance:150,color:"#22c55e",opacity:0.3,width:1},
-move:{enable:true,speed:2}
-},
-
-interactivity:{
-detect_on:"canvas",
-events:{
-onhover:{enable:true,mode:"repulse"},
-onclick:{enable:true,mode:"push"}
-},
-modes:{
-repulse:{distance:120},
-push:{particles_nb:4}
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
 }
-},
-
-retina_detect:true
-
-});
-
-/* SCROLL ANIMATION */
-
-const elements = document.querySelectorAll(".feature,.card,.testimonials");
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-elements.forEach(el=>observer.observe(el));
-
 </script>
 
 </body>
