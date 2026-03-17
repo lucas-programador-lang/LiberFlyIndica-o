@@ -8,15 +8,16 @@
 
 <title>Direitos do passageiro aéreo</title>
 
-<meta name="description" content="Conheça os direitos do passageiro aéreo em casos de atraso de voo, cancelamento e extravio de bagagem.">
+<meta name="description" content="Conheça seus direitos em casos de atraso, cancelamento e bagagem extraviada.">
 
 <link rel="icon" href="logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -28,25 +29,73 @@ body{
 background:#020617;
 color:white;
 line-height:1.7;
-padding:40px 20px;
 }
 
-/* container */
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+max-width:1200px;
+margin:auto;
+position:sticky;
+top:0;
+background:#020617;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
 
+.logo{
+width:80px;
+}
+
+.menu{
+display:flex;
+gap:12px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.menu a:hover{
+background:#22c55e;
+}
+
+.cta-nav{
+background:#22c55e;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+.menu-toggle{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* CONTAINER */
 .container{
 max-width:900px;
-margin:auto;
+margin:40px auto;
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:16px;
 padding:40px;
 }
 
-/* títulos */
-
+/* TITULOS */
 h1{
 color:#22c55e;
-font-size:36px;
+font-size:34px;
 margin-bottom:15px;
 }
 
@@ -56,58 +105,79 @@ margin-bottom:10px;
 font-size:22px;
 }
 
-/* texto */
-
+/* TEXTO */
 p{
 color:#cbd5f5;
 margin-bottom:15px;
 }
 
-/* botão */
-
+/* BOTÃO */
 .button{
 display:inline-block;
 margin-top:25px;
 padding:16px 32px;
-background:linear-gradient(135deg,#22c55e,#16a34a);
+background:#22c55e;
 color:white;
 text-decoration:none;
-border-radius:12px;
+border-radius:10px;
 font-weight:600;
-box-shadow:0 10px 25px rgba(34,197,94,0.3);
 transition:0.2s;
 }
 
 .button:hover{
-transform:translateY(-2px);
-box-shadow:0 15px 30px rgba(34,197,94,0.45);
+transform:scale(1.05);
 }
 
-/* voltar */
-
+/* VOLTAR */
 .back{
 display:block;
 margin-top:30px;
 color:#22c55e;
 text-decoration:none;
 font-size:14px;
-opacity:0.8;
 }
 
-.back:hover{
-opacity:1;
+/* FOOTER */
+.footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+color:#64748b;
 }
 
-/* mobile */
+/* MOBILE */
+@media(max-width:768px){
 
-@media(max-width:700px){
+.menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#020617;
+flex-direction:column;
+display:none;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.cta-nav{
+display:none;
+}
 
 .container{
-padding:30px 20px;
+margin:20px;
+padding:25px;
 }
 
 h1{
-font-size:28px;
+font-size:26px;
 }
 
 }
@@ -118,36 +188,58 @@ font-size:28px;
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+
+<img src="logo.png" class="logo">
+
+<div class="menu" id="menu">
+<a href="atraso-de-voo.html">Atraso</a>
+<a href="cancelamento-de-voo.html">Cancelamento</a>
+<a href="bagagem-extraviada.html">Bagagem</a>
+<a href="overbooking.html">Overbooking</a>
+<a href="direitos-do-passageiro.html">Direitos</a>
+</div>
+
+<i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>
+
+<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
+Verificar Caso
+</a>
+
+</div>
+
+<!-- CONTEÚDO -->
 <div class="container">
 
 <h1>Direitos do passageiro aéreo</h1>
 
 <p>
-Os passageiros de voos possuem direitos garantidos em diversas situações, como atrasos, cancelamentos e extravio de bagagem. Conhecer esses direitos pode ajudar o passageiro a lidar melhor com problemas durante a viagem.
+Os passageiros possuem direitos garantidos em situações como atrasos, cancelamentos e bagagem extraviada. Conhecer esses direitos ajuda a evitar prejuízos.
 </p>
 
 <h2>Atrasos de voo</h2>
 
 <p>
-Quando um voo sofre atraso significativo, a companhia aérea pode ser responsável por oferecer assistência ao passageiro. Dependendo do tempo de espera, podem ser oferecidos comunicação, alimentação e até hospedagem.
+A companhia pode ser obrigada a oferecer alimentação, comunicação e hospedagem dependendo do tempo de espera.
 </p>
 
 <h2>Cancelamentos</h2>
 
 <p>
-Nos casos de cancelamento de voo, o passageiro normalmente deve receber opções como reacomodação em outro voo ou reembolso da passagem. A assistência também pode ser oferecida durante o período de espera.
+Você pode receber reembolso ou ser realocado em outro voo, além de assistência durante a espera.
 </p>
 
-<h2>Extravio de bagagem</h2>
+<h2>Bagagem extraviada</h2>
 
 <p>
-Quando a bagagem é perdida, extraviada ou danificada, a companhia aérea pode ser responsável por resolver o problema e, em determinadas situações, o passageiro pode ter direito a compensação.
+A empresa aérea deve localizar ou indenizar o passageiro em caso de perda ou dano.
 </p>
 
-<h2>Verificar possível compensação</h2>
+<h2>Possível indenização</h2>
 
 <p>
-Dependendo do ocorrido durante a viagem, pode ser possível verificar se existe direito a compensação financeira.
+Dependendo do caso, é possível receber compensação financeira.
 </p>
 
 <a class="button" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
@@ -159,6 +251,16 @@ Verificar possível indenização
 </a>
 
 </div>
+
+<div class="footer">
+© 2026 • Direitos do passageiro
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
