@@ -24,26 +24,26 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(270deg,#020617,#020617,#021427,#020617);
-background-size:400% 400%;
-animation:bgmove 18s ease infinite;
+background:#020617;
 color:white;
 overflow-x:hidden;
-padding-bottom:90px;
+padding-bottom:120px;
 }
 
-@keyframes bgmove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
+/* BARRAS */
+.topbar{
+background:#16a34a;
+text-align:center;
+padding:10px;
+font-size:13px;
 }
 
-/* PARTICLES */
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
+.urgency{
+background:#f59e0b;
+color:#020617;
+text-align:center;
+padding:10px;
+font-size:13px;
 }
 
 /* NAV */
@@ -51,7 +51,7 @@ z-index:-1;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 30px;
+padding:15px 20px;
 max-width:1200px;
 margin:auto;
 position:sticky;
@@ -61,88 +61,168 @@ z-index:1000;
 }
 
 .logo{
-width:95px;
+width:80px;
 }
 
-/* MENU */
 .menu{
 display:flex;
-gap:16px;
-align-items:center;
+gap:10px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
 font-size:14px;
-padding:8px 12px;
-border-radius:8px;
-display:flex;
-gap:6px;
-transition:0.3s;
+padding:6px 10px;
+border-radius:6px;
+transition:0.2s;
 }
 
 .menu a:hover{
-color:#22c55e;
-background:rgba(34,197,94,0.12);
+background:#22c55e;
+transform:scale(1.05);
 }
 
-/* BOTÃO NAV */
+/* CTA NAV */
 .cta-nav{
 background:#22c55e;
-padding:10px 20px;
-border-radius:10px;
+padding:8px 14px;
+border-radius:8px;
 text-decoration:none;
 color:white;
-font-weight:600;
+font-size:14px;
+transition:0.2s;
+}
+
+.cta-nav:hover{
+transform:scale(1.05);
 }
 
 /* MENU MOBILE */
 .menu-toggle{
 display:none;
-font-size:24px;
+font-size:22px;
 cursor:pointer;
 }
 
 /* HERO */
 .hero{
 text-align:center;
-padding:100px 20px 70px;
+padding:80px 20px 50px;
 max-width:900px;
 margin:auto;
 }
 
 .hero h1{
-font-size:48px;
+font-size:42px;
 }
 
 .hero p{
 color:#94a3b8;
-font-size:19px;
+font-size:18px;
+margin-top:10px;
+}
+
+.live-proof{
+margin-top:15px;
+color:#22c55e;
+font-weight:600;
 }
 
 .button-main{
 display:inline-block;
-margin-top:30px;
-padding:18px 50px;
+margin-top:25px;
+padding:16px 40px;
 background:#22c55e;
-border-radius:12px;
-font-size:20px;
+border-radius:10px;
+color:white;
+font-size:18px;
 text-decoration:none;
+transition:0.2s;
 }
 
-/* GRID */
+.button-main:hover{
+transform:scale(1.07);
+}
+
+/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
 padding:20px;
 }
 
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
 margin-top:30px;
+}
+
+.feature{
+text-align:center;
+background:#111827;
+padding:25px;
+border-radius:10px;
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.feature.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.feature:hover{
+transform:translateY(-5px);
+}
+
+/* CARD */
+.card{
+background:#111827;
+padding:25px;
+border-radius:10px;
+margin-top:30px;
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* TESTIMONIAL */
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.testimonial{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
+/* BOTÃO FLUTUANTE */
+.floating-btn{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#22c55e;
+color:white;
+padding:14px 25px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(34,197,94,0.4);
+z-index:999;
 }
 
 /* MOBILE */
@@ -172,7 +252,11 @@ display:none;
 }
 
 .hero h1{
-font-size:32px;
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
 }
 
 .button-main{
@@ -187,9 +271,14 @@ width:100%;
 
 <body>
 
-<div id="particles-js"></div>
+<div class="topbar">
+✈️ Mais de 100.000 passageiros já resolveram problemas de voo
+</div>
 
-<!-- NAV -->
+<div class="urgency">
+⚠️ Verificação gratuita disponível hoje
+</div>
+
 <div class="nav">
 
 <img src="logo.png" class="logo">
@@ -208,12 +297,15 @@ width:100%;
 
 </div>
 
-<!-- HERO -->
 <div class="hero">
 
 <h1>Teve problema com voo?</h1>
 
 <p>Verifique gratuitamente se você pode receber indenização</p>
+
+<div class="live-proof" id="counter">
+🔥 23 pessoas verificando agora
+</div>
 
 <a class="button-main" href="#">
 ✈️ Verificar Meu Caso
@@ -221,23 +313,55 @@ width:100%;
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<div class="container">
+
+<div class="grid">
+
+<div class="feature"><i class="fa-solid fa-plane"></i><h3>Atraso</h3></div>
+<div class="feature"><i class="fa-solid fa-xmark"></i><h3>Cancelamento</h3></div>
+<div class="feature"><i class="fa-solid fa-suitcase"></i><h3>Bagagem</h3></div>
+<div class="feature"><i class="fa-solid fa-money-bill"></i><h3>Compensação</h3></div>
+
+</div>
+
+<div class="card">
+<h2>Como funciona</h2>
+<p>Simples, rápido e gratuito.</p>
+</div>
+
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="floating-btn" href="#">
+Verificar agora
+</a>
 
 <script>
 
-/* PARTICLES (MANTIDO) */
-particlesJS("particles-js", {
-particles:{
-number:{value:80},
-color:{value:"#22c55e"},
-line_linked:{enable:true}
-}
-});
-
-/* MENU MOBILE */
+/* MENU */
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
+
+/* PROVA SOCIAL AUTOMÁTICA */
+setInterval(()=>{
+let n = Math.floor(Math.random()*15)+10;
+document.getElementById("counter").innerText =
+"🔥 "+n+" pessoas verificando agora";
+},3000);
+
+/* ANIMAÇÃO SCROLL */
+const el = document.querySelectorAll(".feature,.card");
+
+const obs = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("show");
+}
+});
+});
+
+el.forEach(i=>obs.observe(i));
 
 </script>
 
