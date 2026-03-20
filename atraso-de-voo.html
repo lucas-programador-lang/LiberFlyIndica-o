@@ -2,271 +2,283 @@
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indenização por Atraso de Voo | Direitos do Passageiro 2026</title>
+    <meta name="description" content="Seu voo atrasou? Saiba como receber até R$ 10.000 de indenização. Verificação gratuita e 100% online.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<title>Indenização por atraso de voo | Direitos do passageiro</title>
+    <style>
+        :root {
+            --primary: #22c55e;
+            --primary-light: #4ade80;
+            --bg-dark: #020617;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
 
-<meta name="description" content="Saiba quando você pode receber indenização por atraso de voo e como verificar gratuitamente se tem direito à compensação.">
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
 
-<link rel="icon" href="logo.png">
+        body {
+            background: radial-gradient(circle at bottom left, #064e3b, #020617 50%);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        /* NAV */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            max-width: 1300px;
+            margin: auto;
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+        }
 
-<style>
+        .logo { width: 90px; filter: brightness(1.2); }
 
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        .menu a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
 
-body{
-background:#020617;
-color:white;
-line-height:1.7;
-}
+        .menu a:hover { color: var(--primary); }
 
-/* NAV */
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-max-width:1200px;
-margin:auto;
-position:sticky;
-top:0;
-background:#020617;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.06);
-}
+        .cta-nav {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
-.logo{
-width:80px;
-}
+        /* CONTENT WRAPPER */
+        .main-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-.menu{
-display:flex;
-gap:12px;
-}
+        /* HEADER BOX */
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-.menu a{
-color:white;
-text-decoration:none;
-font-size:14px;
-padding:6px 10px;
-border-radius:6px;
-}
+        .badge {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
 
-.menu a:hover{
-background:#22c55e;
-}
+        h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.cta-nav{
-background:#22c55e;
-padding:8px 14px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-size:14px;
-}
+        /* GLASS CARD SECTION */
+        .content-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
 
-.menu-toggle{
-display:none;
-font-size:22px;
-cursor:pointer;
-}
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary-light);
+        }
 
-/* CONTAINER */
-.container{
-max-width:900px;
-margin:40px auto;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:16px;
-padding:40px;
-}
+        p { color: var(--text-dim); margin-bottom: 20px; font-size: 17px; }
 
-/* TITULOS */
-h1{
-color:#22c55e;
-font-size:34px;
-margin-bottom:15px;
-}
+        /* LISTS CUSTOM */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
 
-h2{
-margin-top:30px;
-margin-bottom:10px;
-font-size:22px;
-}
+        .right-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
 
-/* TEXTO */
-p{
-color:#cbd5f5;
-margin-bottom:15px;
-}
+        .right-item i { color: var(--primary); font-size: 20px; margin-top: 4px; }
+        .right-item b { display: block; color: white; margin-bottom: 5px; }
+        .right-item span { font-size: 14px; color: var(--text-dim); }
 
-/* LISTA */
-ul{
-margin-left:20px;
-margin-bottom:20px;
-}
+        /* CTA BUTTON */
+        .button-group {
+            text-align: center;
+            margin-top: 40px;
+        }
 
-li{
-margin-bottom:8px;
-}
+        .btn-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 15px 30px rgba(34, 197, 94, 0.2);
+            transition: 0.3s;
+        }
 
-/* BOTÃO */
-.button{
-display:inline-block;
-margin-top:25px;
-padding:16px 32px;
-background:#22c55e;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:600;
-transition:0.2s;
-}
+        .btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.4);
+            background: var(--primary-light);
+        }
 
-.button:hover{
-transform:scale(1.05);
-}
+        .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
-/* VOLTAR */
-.back{
-display:block;
-margin-top:30px;
-color:#22c55e;
-text-decoration:none;
-font-size:14px;
-}
+        .back-link:hover { color: white; }
 
-/* FOOTER */
-.footer{
-text-align:center;
-margin-top:40px;
-padding:20px;
-color:#64748b;
-}
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-dim);
+            font-size: 14px;
+        }
 
-/* MOBILE */
-@media(max-width:768px){
-
-.menu{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:#020617;
-flex-direction:column;
-display:none;
-padding:20px;
-}
-
-.menu.active{
-display:flex;
-}
-
-.menu-toggle{
-display:block;
-}
-
-.cta-nav{
-display:none;
-}
-
-.container{
-margin:20px;
-padding:25px;
-}
-
-h1{
-font-size:26px;
-}
-
-}
-
-</style>
-
+        @media (max-width: 768px) {
+            .nav { padding: 15px 5%; }
+            .menu, .cta-nav { display: none; }
+            .content-card { padding: 25px; }
+            h1 { font-size: 26px; }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
+    <nav class="nav">
+        <img src="logo.png" class="logo" alt="Logo">
+        <div class="menu">
+            <a href="index.html">Início</a>
+            <a href="cancelamento-de-voo.html">Cancelamento</a>
+            <a href="bagagem-extraviada.html">Bagagem</a>
+            <a href="direitos-do-passageiro.html">Direitos</a>
+        </div>
+        <a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D" target="_blank">Verificar Agora</a>
+    </nav>
 
-<img src="logo.png" class="logo">
+    <div class="main-container">
+        
+        <header class="page-header">
+            <span class="badge">Proteção Jurídica Aérea</span>
+            <h1>Indenização por Atraso de Voo</h1>
+            <p>Descubra como transformar o transtorno do atraso em uma compensação financeira justa.</p>
+        </header>
 
-<div class="menu" id="menu">
-<a href="atraso-de-voo.html">Atraso</a>
-<a href="cancelamento-de-voo.html">Cancelamento</a>
-<a href="bagagem-extraviada.html">Bagagem</a>
-<a href="overbooking.html">Overbooking</a>
-<a href="direitos-do-passageiro.html">Direitos</a>
-</div>
+        <section class="content-card">
+            <h2><i class="fa-solid fa-circle-info"></i> Quando você tem direito?</h2>
+            <p>No Brasil, a ANAC estabelece regras claras. Se o seu voo atrasou mais de <b>4 horas</b>, ou se você perdeu uma conexão devido a um atraso da companhia, as chances de indenização são altíssimas.</p>
+            
+            <div class="rights-grid">
+                <div class="right-item">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <div>
+                        <b>Tempo de Espera</b>
+                        <span>Atrasos superiores a 4h podem gerar danos morais.</span>
+                    </div>
+                </div>
+                <div class="right-item">
+                    <i class="fa-solid fa-utensils"></i>
+                    <div>
+                        <b>Assistência Material</b>
+                        <span>A partir de 2h de espera, você tem direito a alimentação paga pela empresa.</span>
+                    </div>
+                </div>
+                <div class="right-item">
+                    <i class="fa-solid fa-hotel"></i>
+                    <div>
+                        <b>Hospedagem</b>
+                        <span>Atrasos que exigem pernoite dão direito a hotel e traslado gratuito.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>
+        <section class="content-card" style="border-left: 4px solid var(--primary);">
+            <h2><i class="fa-solid fa-check-double"></i> O que você deve fazer agora:</h2>
+            <p>Para garantir sua indenização de até <b>R$ 10.000</b>, siga estes passos simples enquanto ainda está no aeroporto ou assim que chegar:</p>
+            <ul style="list-style: none; color: var(--text-dim); margin-left: 10px;">
+                <li style="margin-bottom: 15px;"><i class="fa-solid fa-camera" style="color: var(--primary); margin-right: 10px;"></i> Tire foto do painel de embarque mostrando o atraso.</li>
+                <li style="margin-bottom: 15px;"><i class="fa-solid fa-ticket" style="color: var(--primary); margin-right: 10px;"></i> Guarde seu cartão de embarque (físico ou digital).</li>
+                <li style="margin-bottom: 15px;"><i class="fa-solid fa-receipt" style="color: var(--primary); margin-right: 10px;"></i> Guarde comprovantes de gastos extras com comida ou transporte.</li>
+            </ul>
+        </section>
 
-<a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
-Verificar Caso
-</a>
+        <div class="button-group">
+            <a href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D" class="btn-large" target="_blank">
+                <i class="fa-solid fa-magnifying-glass-chart"></i> VERIFICAR MEU CASO GRATUITAMENTE
+            </a>
+            <br>
+            <a href="index.html" class="back-link">← Voltar para o início</a>
+        </div>
 
-</div>
+    </div>
 
-<!-- CONTEÚDO -->
-<div class="container">
-
-<h1>Indenização por atraso de voo</h1>
-
-<p>
-O atraso de voo é um problema comum enfrentado por passageiros. Dependendo da duração e da causa do atraso, você pode ter direito a compensação financeira.
-</p>
-
-<h2>Quando o passageiro pode ter direito?</h2>
-
-<p>
-Em muitos casos, atrasos superiores a 4 horas podem gerar direito à indenização, especialmente quando causam prejuízos ao passageiro.
-</p>
-
-<h2>Direitos durante o atraso</h2>
-
-<ul>
-<li>Alimentação após certo tempo</li>
-<li>Comunicação gratuita</li>
-<li>Hospedagem (se necessário)</li>
-</ul>
-
-<h2>Como verificar se você tem direito</h2>
-
-<p>
-Você pode verificar gratuitamente em plataformas especializadas que analisam o seu caso rapidamente.
-</p>
-
-<a class="button" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D&utm_medium=referral&utm_source=beeviral" target="_blank">
-Verificar possível indenização
-</a>
-
-<a class="back" href="index.html">
-← Voltar para página inicial
-</a>
-
-</div>
-
-<div class="footer">
-© 2026 • Direitos do passageiro
-</div>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
+    <footer class="footer">
+        <p>© 2026 Voo Resolvido • Especialistas em Direitos do Passageiro</p>
+    </footer>
 
 </body>
 </html>
