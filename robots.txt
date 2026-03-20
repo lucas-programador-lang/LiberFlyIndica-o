@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /tmp/
 
-Sitemap: https://lucas-programador-lang.github.io/LiberFlyIndica-o/sitemap.xml
+# Caminho direto para o seu sitemap atualizado
+Sitemap: https://vooresolvido.lucas-dev-programador.workers.dev/sitemap.xml
