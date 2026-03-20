@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lumina Rights | Indenização por Problemas em Voos</title>
-    <meta name="description" content="Atraso, cancelamento ou overbooking? Verifique em 2 minutos se você tem direito a uma indenização de até R$ 10.000.">
+    <title>Indenização por Problemas em Voo | Verifique seu Direito Gratuitamente</title>
+    <meta name="description" content="Atraso ou cancelamento de voo? Verifique em 2 minutos se você tem direito a uma indenização de até R$ 10.000.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -29,6 +29,7 @@
             background: radial-gradient(circle at top right, #064e3b, #020617 40%);
             background-color: var(--bg-dark);
             color: var(--text-main);
+            overflow-x: hidden;
             line-height: 1.6;
         }
 
@@ -42,6 +43,7 @@
             padding: 8px;
             font-size: 13px;
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         .nav {
@@ -58,67 +60,180 @@
             border-bottom: 1px solid var(--glass-border);
         }
 
-        .logo { width: 100px; filter: brightness(1.2); }
+        .logo { width: 110px; filter: brightness(1.2); transition: 0.3s; }
+        .logo:hover { transform: scale(1.05); }
 
-        .menu { display: flex; gap: 5px; }
+        .menu { display: flex; gap: 10px; }
         .menu a {
             color: var(--text-dim);
             text-decoration: none;
             font-size: 14px;
-            padding: 10px 15px;
-            border-radius: 10px;
+            font-weight: 500;
+            padding: 10px 16px;
+            border-radius: 12px;
             transition: 0.3s;
         }
-        .menu a:hover { color: white; background: var(--glass); }
+        .menu a:hover, .menu a.active { color: white; background: var(--glass); }
 
         .cta-nav {
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
+            background: white;
+            color: var(--bg-dark);
+            padding: 12px 24px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
             font-size: 14px;
+            transition: 0.3s;
+        }
+        .cta-nav:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 100px 20px 80px;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        /* HERO */
-        .hero { text-align: center; padding: 100px 20px 60px; max-width: 900px; margin: auto; }
-        .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; margin-bottom: 20px; }
-        .btn-main {
+        .badge {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 700;
             display: inline-block;
+            margin-bottom: 24px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(to bottom, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: clamp(16px, 2vw, 20px);
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
             background: var(--primary);
             color: white;
-            padding: 20px 40px;
-            border-radius: 14px;
+            padding: 22px 48px;
+            border-radius: 16px;
             font-size: 18px;
             font-weight: 800;
             text-decoration: none;
-            box-shadow: 0 15px 30px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.3);
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: pulse 2s infinite;
         }
 
-        /* GRID */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .btn-main:hover { transform: scale(1.05); background: var(--primary-dark); }
+
+        /* FEATURES GRID */
         .container { max-width: 1200px; margin: auto; padding: 40px 5%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 32px; margin-bottom: 10px; }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .feature-card {
             background: var(--glass);
             border: 1px solid var(--glass-border);
-            padding: 30px;
-            border-radius: 20px;
-            transition: 0.3s;
+            padding: 40px;
+            border-radius: 24px;
+            text-align: left;
+            transition: 0.4s;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
         }
 
-        .feature-card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .icon-box { font-size: 30px; color: var(--primary); margin-bottom: 15px; }
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--primary);
+            transform: translateY(-10px);
+        }
 
-        @media (max-width: 768px) { .menu { display: none; } }
+        .icon-box {
+            width: 60px; height: 60px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary); font-size: 24px;
+        }
+
+        /* STEPS SECTION */
+        .how-it-works {
+            background: var(--glass);
+            border-radius: 32px;
+            padding: 60px;
+            margin: 80px 0;
+            border: 1px solid var(--glass-border);
+        }
+
+        .steps-flex {
+            display: flex; justify-content: space-between;
+            gap: 40px; margin-top: 40px; flex-wrap: wrap;
+        }
+
+        .step-item { flex: 1; min-width: 200px; }
+        .step-number {
+            font-size: 48px; font-weight: 800; opacity: 0.2;
+            margin-bottom: -20px; display: block;
+        }
+
+        /* TESTIMONIALS */
+        .testimonial-card {
+            background: #0f172a;
+            padding: 30px;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        /* FLOATING ACTION */
+        .floating-action { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+        .btn-float {
+            background: #25d366; width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            text-decoration: none; transition: 0.3s;
+        }
+        .btn-float:hover { transform: scale(1.1) rotate(10deg); }
+
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            .hero { padding: 60px 20px 40px; }
+            .how-it-works { padding: 30px; }
+        }
+
+        /* Scroll Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 
@@ -126,75 +241,150 @@
     <div id="particles-js"></div>
 
     <div class="top-announcement">
-        <i class="fa-solid fa-check-circle"></i> MAIS DE R$ 5 MILHÕES EM INDENIZAÇÕES RECUPERADAS
+        <i class="fa-solid fa-shield-check"></i> JÁ RECUPERAMOS MAIS DE R$ 5 MILHÕES PARA PASSAGEIROS
     </div>
 
     <nav class="nav">
-        <img src="logo.png" class="logo" alt="Lumina Rights">
+        <img src="logo.png" class="logo" alt="Lumina Rights Logo">
         <div class="menu">
-            <a href="index.html">Início</a>
+            <a href="index.html" class="active">Início</a>
             <a href="atraso-de-voo.html">Atrasos</a>
             <a href="cancelamento-de-voo.html">Cancelamentos</a>
             <a href="bagagem-extraviada.html">Bagagem</a>
             <a href="overbooking.html">Overbooking</a>
             <a href="direitos-do-passageiro.html">Seus Direitos</a>
         </div>
-        <a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D" target="_blank">Verificar Agora</a>
+        <a class="cta-nav" href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D" target="_blank">Verificar Indenização</a>
     </nav>
 
     <header class="hero">
+        <div class="badge">Sua viagem, seus direitos protegidos</div>
         <h1>Problemas com seu voo?<br>Receba até R$ 10.000</h1>
-        <p>Verifique gratuitamente se você tem direito a uma compensação financeira em menos de 2 minutos.</p>
-        <br>
+        <p>Atrasos, cancelamentos ou extravio de bagagem? Verifique gratuitamente em menos de 2 minutos.</p>
+        
         <a href="https://liberfly.com.br/reclamacao/?bvid=NjU4MA%3D%3D" class="btn-main" target="_blank">
-            VERIFICAR MEU DIREITO
+            <i class="fa-solid fa-plane-shield"></i> VERIFICAR MEU DIREITO
         </a>
+        
+        <div style="margin-top: 30px; color: var(--primary); font-size: 14px; font-weight: 600;">
+            <i class="fa-solid fa-bolt"></i> <span id="live-counter">14</span> pessoas consultando agora
+        </div>
     </header>
 
     <main class="container">
-        <div class="grid">
+        <div class="section-title reveal">
+            <h2>Como podemos te ajudar?</h2>
+            <p>Selecione o problema que você enfrentou para saber mais.</p>
+        </div>
+
+        <div class="grid reveal">
             <a href="atraso-de-voo.html" class="feature-card">
                 <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
                 <h3>Atraso de Voo</h3>
-                <p>Superior a 4 horas?</p>
+                <p>Atrasos superiores a 4 horas geram direito a assistência e possível indenização.</p>
             </a>
 
             <a href="cancelamento-de-voo.html" class="feature-card">
-                <div class="icon-box"><i class="fa-solid fa-plane-slash"></i></div>
+                <div class="icon-box"><i class="fa-solid fa-calendar-xmark"></i></div>
                 <h3>Voo Cancelado</h3>
-                <p>Sem aviso prévio?</p>
+                <p>Se o seu voo foi cancelado sem aviso prévio de 72h, você pode ser compensado.</p>
             </a>
 
             <a href="bagagem-extraviada.html" class="feature-card">
-                <div class="icon-box"><i class="fa-solid fa-suitcase"></i></div>
+                <div class="icon-box"><i class="fa-solid fa-suitcase-rolling"></i></div>
                 <h3>Bagagem</h3>
-                <p>Extravio ou danos?</p>
+                <p>Malas danificadas, furtadas ou extraviadas? Saiba como exigir seus direitos.</p>
             </a>
-
+            
             <a href="overbooking.html" class="feature-card">
                 <div class="icon-box"><i class="fa-solid fa-users-slash"></i></div>
                 <h3>Overbooking</h3>
-                <p>Impedido de embarcar?</p>
+                <p>Foi impedido de embarcar por excesso de passageiros? Verifique seu direito.</p>
             </a>
+        </div>
+
+        <section class="how-it-works reveal">
+            <div style="text-align: center;">
+                <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: 2px;">Processo 100% Online</span>
+                <h2 style="margin-top: 10px;">Como funciona o processo?</h2>
+            </div>
+            <div class="steps-flex">
+                <div class="step-item">
+                    <span class="step-number">01</span>
+                    <h4>Verificação</h4>
+                    <p style="color: var(--text-dim); font-size: 14px;">Você preenche os dados do seu voo em nosso simulador rápido.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">02</span>
+                    <h4>Análise Especializada</h4>
+                    <p style="color: var(--text-dim); font-size: 14px;">Nossa equipe avalia as chances reais de sucesso do seu caso.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">03</span>
+                    <h4>Indenização</h4>
+                    <p style="color: var(--text-dim); font-size: 14px;">Nós cuidamos da burocracia e você recebe sua compensação.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-title reveal">
+            <h2>O que dizem nossos clientes</h2>
+        </div>
+
+        <div class="grid reveal" style="margin-bottom: 80px;">
+            <div class="testimonial-card">
+                <div style="color: #fbbf24; margin-bottom: 15px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p>"Processo extremamente transparente. Recebi minha indenização em 45 dias."</p>
+                <h5 style="margin-top: 15px;">Ricardo Menezes, SP</h5>
+            </div>
+            <div class="testimonial-card">
+                <div style="color: #fbbf24; margin-bottom: 15px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p>"Não gastei nada do bolso e consegui R$ 3.500 pela mala extraviada."</p>
+                <h5 style="margin-top: 15px;">Beatriz Souza, PR</h5>
+            </div>
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: var(--text-dim); font-size: 13px;">
-        <p>© 2026 Voo Resolvido • Direitos do Passageiro</p>
+    <div class="floating-action">
+        <a href="https://wa.me/5500000000000" class="btn-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--glass-border); color: var(--text-dim); font-size: 14px;">
+        <p>© 2026 Lumina Rights - Proteção ao Passageiro</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
             particles: {
-                number: { value: 30 },
+                number: { value: 40, density: { enable: true, value_area: 1000 } },
                 color: { value: "#22c55e" },
-                opacity: { value: 0.1 },
+                opacity: { value: 0.2 },
                 size: { value: 2 },
-                line_linked: { enable: true, distance: 150, color: "#22c55e", opacity: 0.05 },
+                line_linked: { enable: true, distance: 150, color: "#22c55e", opacity: 0.1, width: 1 },
                 move: { enable: true, speed: 1 }
             }
         });
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        setInterval(() => {
+            let count = Math.floor(Math.random() * 10) + 15;
+            document.getElementById('live-counter').innerText = count;
+        }, 5000);
     </script>
 </body>
 </html>
